@@ -1,5 +1,152 @@
 <template>
+  
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+           
+
+      <img style="height:25rem;   object-position: center;  object-fit: none;
+      background-repeat: no-repeat;" class="d-block w-100" src="../assets/img3.jpg" alt="Third slide">
+       
+      <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Earn Money With Us</h1>
+                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img style="height:25rem;   object-position: center;  object-fit: none;
+            background-repeat: no-repeat;" class="d-block w-100" src="../assets/img2.jpg"  alt="Second slide">
+               <div class="container">
+              <div class="carousel-caption">
+                <h1>Become A Dealer</h1>
+                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img style="height:25rem;   object-position: center;  object-fit: none;
+            background-repeat: no-repeat;" class="d-block w-100" src="../assets/img1.jpg"  alt="First slide">
+                 <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Welcome Back</h1>
+                <p><a class="btn btn-lg btn-primary" href="#">Login As Merchant</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+ 
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+
+
+    <!-- START THE FEATURETTES -->
+<br>
+  <h1 style="text-align:center; margin:3rem;">Products For Bussines</h1>
+ <hr class="featurette-divider">
+<br>
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Ordering Application on Android & IOS  <span class="text-muted">Another day another meal.</span></h2>
+        <p class="lead">Have a great evening at your homes and maybe order some food.</p>
+      </div>
+      <div class="col-md-5">
+         <img style="height:25rem;   object-position: center;  object-fit: none;
+  background-repeat: no-repeat;" class="d-block w-100" src="../assets/post1.jpg" alt="First Photo">
+
+      </div>
+    </div>
+<br>
+    <hr class="featurette-divider">
+<br>
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Driver Application <span class="text-muted">The interactive map view</span></h2>
+        <p class="lead"> makes it easy for driver manage all the ongoing deliveries</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+          <img style="height:25rem;   object-position: center;  object-fit: none;
+  background-repeat: no-repeat;" class="d-block w-100" src="../assets//post2.jpg" alt="Second Photo">
+
+      </div>
+    </div>
+<br>
+    <hr class="featurette-divider">
+<br>
+
+
+
+
+    <div class="row featurette">
+       <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Admin Dashboard <span class="text-muted">Monitor and manage your transaction operations</span></h2>
+        <p class="lead">that helps create excellent experiences with E-Commerce</p>
+      </div>
+       <div class="col-md-5">
+              <img style="height:25rem;   object-position: center;  object-fit: none;
+  background-repeat: no-repeat;" class="d-block w-100" src="../assets/post3.jpg" alt="Third photo">
+
+          </div>
+    </div>
+<br>
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+<br>
+  <h1 style="text-align:center; margin:3rem;">R&D Team</h1>
+
+    <!-- Three columns of text below the carousel -->
+    <div style='margin-top:10px;' class="row">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../assets/Screenshot1.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+
+        <h2 class="fw-normal">Roman Potchman</h2>
+        <p>Operation Manager</p>
+        <p><a class="btn btn-secondary" href="https://www.facebook.com/romchik2802">Contact &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../assets/Screenshot2.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+
+        <h2 class="fw-normal">Dmitry Polskoy</h2>
+        <p>Solution Architect</p>
+        <p><a class="btn btn-secondary" href="https://www.facebook.com/polskoydm">Contact &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../assets/screenshot3.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+
+        <h2 class="fw-normal">Kateryna Trojan</h2>
+        <p>UX/UI Developer</p>
+        <p><a class="btn btn-secondary" href="https://www.instagram.com/troyanushka">Contact &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+
+
+
+  
   <div class="container">
+
     <div class="row">
       <div class="col-12">
         <button class="open-chat-button" @click="showChat = true"> <i class="fas fa-comments"></i></button>
@@ -8,7 +155,7 @@
         <div class="row">
           <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="branch in branches" :key="branch.id">
             <div class="card">
-              <img :src="'https://polskoydm.pythonanywhere.com//static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
+              <img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">{{ branch.address }}</h5>
                 <p class="card-text">{{ branch.name }}</p>

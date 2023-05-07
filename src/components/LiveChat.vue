@@ -16,7 +16,8 @@
         <hr />
       </div>
       <div class="input-form">
-        <input v-model="newMessage.username" placeholder="Please Type Here ..." type="text" required>
+        
+        <input v-model="newMessage.text" placeholder="Please Type Here ..." type="text" required>
         <button type="submit" @click.prevent="sendMessage">Send</button>
       </div>
     </div>
@@ -24,6 +25,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -37,33 +40,38 @@ export default {
       ],
       newMessage: {
         id: null,
-        username: '',
+        username: 'Guest',
         text: '',
         time: '',
       },
     };
   },
   methods: {
-    
     sendMessage() {
-
-      if (this.newMessage.username.length < 5) {
+  if (this.newMessage.text.length < 5) {
     // Either username or text field is empty
     alert('Please enter a message with at least 5 symbols.'); // display an error message if message is empty or too short
     return;
- 
   } else { 
-  this.newMessage.time = new Date().toLocaleTimeString();
-  this.messages.push(this.newMessage);
-  this.newMessage = {
-    id: null,
-    username: '',
-    text: '',
-    time: '', }
+    const options = { hour: 'numeric', minute: 'numeric' };
+    this.newMessage.time = new Date().toLocaleTimeString(undefined, options);
+    const username = this.newMessage.username; // store username in a separate variable
+    this.messages.push(this.newMessage);
+    axios.post('https://polskoydm.pythonanywhere.com/newchat', {text: this.newMessage.text})
+      .then(response => {
+          console.log(response.data.message);
+      })
+      .catch(error => {
+          console.log(error);
+      })
+    this.newMessage = {
+      id: null,
+      username: username, // set username property to stored value
+      text: '',
+      time: '',
+    };
   }
-  },
-
-
+}
    
   },
 };

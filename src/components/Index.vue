@@ -11,7 +11,7 @@
            
 
       <img style="height:25rem;   object-position: center;  object-fit: none;
-      background-repeat: no-repeat;" class="d-block w-100" src="../assets/img3.jpg" alt="Third slide">
+      background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img3.jpg" alt="Third slide">
        
       <div class="container">
               <div class="carousel-caption text-start">
@@ -22,7 +22,7 @@
           </div>
           <div class="carousel-item">
             <img style="height:25rem;   object-position: center;  object-fit: none;
-            background-repeat: no-repeat;" class="d-block w-100" src="../assets/img2.jpg"  alt="Second slide">
+            background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img2.jpg"  alt="Second slide">
                <div class="container">
               <div class="carousel-caption">
                 <h1>Become A Dealer</h1>
@@ -32,7 +32,7 @@
           </div>
           <div class="carousel-item">
             <img style="height:25rem;   object-position: center;  object-fit: none;
-            background-repeat: no-repeat;" class="d-block w-100" src="../assets/img1.jpg"  alt="First slide">
+            background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img1.jpg"  alt="First slide">
                  <div class="container">
               <div class="carousel-caption text-end">
                 <h1>Welcome Back</h1>
@@ -73,7 +73,7 @@
       </div>
       <div class="col-md-5">
          <img style="height:25rem;   object-position: center;  object-fit: none;
-  background-repeat: no-repeat;" class="d-block w-100" src="../assets/post1.jpg" alt="First Photo">
+  background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post1.jpg" alt="First Photo">
 
       </div>
     </div>
@@ -87,7 +87,7 @@
       </div>
       <div class="col-md-5 order-md-1">
           <img style="height:25rem;   object-position: center;  object-fit: none;
-  background-repeat: no-repeat;" class="d-block w-100" src="../assets//post2.jpg" alt="Second Photo">
+  background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post2.jpg" alt="Second Photo">
 
       </div>
     </div>
@@ -105,7 +105,7 @@
       </div>
        <div class="col-md-5">
               <img style="height:25rem;   object-position: center;  object-fit: none;
-  background-repeat: no-repeat;" class="d-block w-100" src="../assets/post3.jpg" alt="Third photo">
+  background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post3.jpg" alt="Third photo">
 
           </div>
     </div>
@@ -118,21 +118,21 @@
     <!-- Three columns of text below the carousel -->
     <div style='margin-top:10px;' class="row">
       <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../assets/Screenshot1.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot1.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
 
         <h2 class="fw-normal">Roman Potchman</h2>
         <p>Operation Manager</p>
         <p><a class="btn btn-secondary" href="https://www.facebook.com/romchik2802">Contact &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../assets/Screenshot2.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot2.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
 
         <h2 class="fw-normal">Dmitry Polskoy</h2>
         <p>Solution Architect</p>
         <p><a class="btn btn-secondary" href="https://www.facebook.com/polskoydm">Contact &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../assets/screenshot3.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot3.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
 
         <h2 class="fw-normal">Kateryna Trojan</h2>
         <p>UX/UI Developer</p>

@@ -9,11 +9,12 @@ const routes = [
     component: Home,
   },
   {
-    path: '/:token/shop',
+    path: '/:token?/shop',
     name: 'ShoppingCart',
     component: ShoppingCart
   },
 ];
+
 
 const router = createRouter({
   history: createWebHistory(),

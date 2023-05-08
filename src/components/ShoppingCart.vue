@@ -98,26 +98,32 @@ export default {
     },
 
     checkout() {
-      const data = {
-        items: this.cartItems.map(item => ({
-          product_id: item.product.id,
-          quantity: item.quantity,
-        })),
-        total: this.cartTotal,
-      };
-      axios.post('/checkout', data)
-        .then(response => {
-          console.log(response.data);
-          // Clear cart items and show success message
-          this.cartItems = [];
-          alert('Checkout successful!');
-        })
-        .catch(error => {
-          console.log(error);
-          // Show error message
-          alert('Checkout failed, please try again.');
-        });
-    },
+  if (this.cartItems.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
+  
+  const data = {
+    items: this.cartItems.map(item => ({
+      product_id: item.product.id,
+      quantity: item.quantity,
+    })),
+    total: this.cartTotal,
+  };
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.action = 'https://polskoydm.pythonanywhere.com/checkout';
+  const itemsInput = document.createElement('input');
+  itemsInput.name = 'items';
+  itemsInput.value = JSON.stringify(data.items);
+  form.appendChild(itemsInput);
+  const totalInput = document.createElement('input');
+  totalInput.name = 'total';
+  totalInput.value = data.total;
+  form.appendChild(totalInput);
+  document.body.appendChild(form);
+  form.submit();
+}
   },
 }
 
@@ -136,7 +142,7 @@ export default {
 
 .product-grid__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
   grid-gap: 20px;
 

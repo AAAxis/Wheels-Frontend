@@ -35,8 +35,8 @@
             background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img1.jpg"  alt="First slide">
                  <div class="container">
               <div class="carousel-caption text-end">
-                <h1>Shop Admin Panel</h1>
-                <p><a class="btn btn-lg btn-primary" href="#">Login As Merchant</a></p>
+                <h1>Admin Panel</h1>
+                <p><a class="btn btn-lg btn-primary" href="#">Login as Merchant</a></p>
               </div>
             </div>
           </div>

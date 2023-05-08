@@ -15,7 +15,7 @@
        
       <div class="container">
               <div class="carousel-caption text-start">
-                <h1>Earn Money With Us</h1>
+                <h1>Start Earn Money</h1>
                 <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
               </div>
             </div>
@@ -25,7 +25,7 @@
             background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img2.jpg"  alt="Second slide">
                <div class="container">
               <div class="carousel-caption">
-                <h1>Become A Dealer</h1>
+                <h1>Become a Partner</h1>
                 <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
               </div>
             </div>
@@ -35,7 +35,7 @@
             background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img1.jpg"  alt="First slide">
                  <div class="container">
               <div class="carousel-caption text-end">
-                <h1>Welcome Back</h1>
+                <h1>Shop Admin Panel</h1>
                 <p><a class="btn btn-lg btn-primary" href="#">Login As Merchant</a></p>
               </div>
             </div>

@@ -188,7 +188,7 @@ h1 {
 
 
 button {
-  padding: 1rem 1rem;
+  padding: 0.7rem 1rem;
   font-size: 1.2rem;
   background-color: #333;
   color: white;

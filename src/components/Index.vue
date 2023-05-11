@@ -90,7 +90,7 @@
  
     <!-- Three columns of text below the carousel -->
     <div style='margin-top:10px;' class="row">
-      <h1 style="text-align:center; margin:3rem; color:black;">R&D Team</h1>
+      <h2 style="text-align:center; margin:3rem; color:black;">Our R&D Team</h2>
 
 
       <div class="col-lg-4">

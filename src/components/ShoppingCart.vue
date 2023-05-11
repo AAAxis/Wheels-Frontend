@@ -47,7 +47,7 @@
             </div>
             <div class="d-flex flex-row align-items-center">
               <span class="d-block ml-3 font-weight-bold">${{ item.product.price }}</span>
-              <button style="color:red; margin-left: 2rem;" @click="removeFromCart(index)"><i class="fa fa-trash-o ml-3 text-black-50"></i></button>
+              <button style=" margin-left: 2rem;" @click="removeFromCart(index)"><i class="fa fa-trash-o ml-3 text-white-50"></i></button>
           
             </div>
           </div>
@@ -226,16 +226,5 @@ export default {
   margin-top: 10px;
 }
 
-.cart-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 20px;
-}
 
-.cart-table th,
-.cart-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
 </style>

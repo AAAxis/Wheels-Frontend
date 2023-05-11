@@ -189,7 +189,7 @@ h1 {
 
 
 button {
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 0.5rem;
   font-size: 1.2rem;
   background-color: #333;
   color: white;

@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="branch in branches" :key="branch.id">
             <div class="card">
-              <a :href="`/${branch.token}/shop`" class="btn btn-primary"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
+              <a :href="`/${branch.token}/shop`" ><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
             </a>
                <div class="card-body">
                 <h5 class="card-title">{{ branch.name }}</h5>
@@ -151,6 +151,37 @@ export default {
 </script>
 
 <style>
+
+
+body, html {
+    height: 50%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png');
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
 .card-img-top {
   height: 200px;
   object-fit: cover;
@@ -160,10 +191,7 @@ export default {
   background-color: #007bff;
   border-color: #007bff;
 }
-</style>
 
-
-<style>
 .card-img-top {
   height: 200px;
   object-fit: cover;
@@ -196,32 +224,4 @@ export default {
 }
 
 
-body, html {
-    height: 100%;
-}
-
-/* The hero image */
-.hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png");
-
-  /* Set a specific height */
-  height: 50%;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-/* Place text in the middle of the image */
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
 </style>

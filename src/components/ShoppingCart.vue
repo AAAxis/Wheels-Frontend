@@ -5,13 +5,13 @@
   <div class="product-grid__cards">
     <div v-for="product in products" :key="product.id" class="product-grid__card" @click="addToCart(product)">
       <div class="product-grid__info">
-        <h4 class="product-grid__name">{{product.name}} - ${{product.price}}</h4>
+        <h4 class="product-grid__name">{{product.name}}</h4>
     
       </div>
       <div class="product-grid__image-wrapper">
         <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
         <div class="product-grid__add-to-cart">
-          <button class="btn btn-success">Add to cart</button>
+          <button class="btn btn-success">Add to cart - ${{product.price}}</button>
         </div>
       </div>
     

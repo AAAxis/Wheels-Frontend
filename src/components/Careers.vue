@@ -192,7 +192,7 @@
   
   <script>
 
-import Navbar from ".Navbar.vue";
+import Navbar from "./Navbar.vue";
 
 export default {
   name: "Careers",

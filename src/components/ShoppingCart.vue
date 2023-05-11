@@ -11,7 +11,7 @@
       <div class="product-grid__image-wrapper">
         <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
         <div class="product-grid__add-to-cart">
-          <p style="color:aliceblue"><button class="btn btn-success">Add to cart</button> - ${{product.price}}</p>
+          <p style="color:aliceblue"><button class="btn btn-success">Add to cart</button> - ${{product.price}}.00</p>
         </div>
       </div>
     
@@ -19,38 +19,46 @@
   </div>
 <br>
 
-      <h2>Shopping Cart</h2>
-      <table class="cart-table">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(item, index) in cartItems" :key="index">
-            <td>{{item.product.name}}</td>
-            <td>{{item.quantity}}</td>
-            <td>${{item.product.price}}</td>
-            <td>
-  <button class="btn btn-danger" @click="removeFromCart(index)">
-    <i class="fas fa-trash"></i>
-  </button>
-</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td></td>
-            <td>Total: </td>
-            <td> ${{cartTotal}}</td>
-          
-            <td></td>
-          </tr>
-        </tfoot>
-      </table>
+
+
+
+<link href="https://polskoydm.pythonanywhere.com/static/styles/checkout.css" rel="stylesheet">
+<div class="container mt-5 p-3 rounded cart">
+  <div class="row no-gutters">
+    <div class="col-md-8">
+      <div class="product-details mr-2">
+        <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><span class="ml-2">Continue Shopping</span></div>
+        <hr>
+        <h6 class="mb-0">Shopping cart</h6>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex flex-row align-items-center"><span class="text-black-50">Sort by:</span>
+            <div class="price ml-2"><span class="mr-1">price</span><i class="fa fa-angle-down"></i></div>
+          </div>
+        </div>
+
+        <div class="cart-items mt-3">
+          <div v-for="(item, index) in cartItems" :key="index" class="item d-flex justify-content-between align-items-center p-2 rounded">
+            <div class="d-flex flex-row">
+              <img class="rounded" :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + item.product.image" width="40">
+              <div class="ml-2">
+                <span class="font-weight-bold d-block">{{ item.product.name }}</span>
+                <span class="spec">{{ item.quantity }}x</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+              <span class="d-block ml-3 font-weight-bold">${{ item.product.price }}</span>
+              <i class="fa fa-trash-o ml-3 text-black-50"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+            <h1>Total: ${{cartTotal}}</h1>
+     
       <br>
       <button class="btn btn-primary" @click="checkout">Checkout</button>
     </div>

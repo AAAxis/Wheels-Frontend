@@ -168,7 +168,7 @@ export default {
 
 .image-container {
   position: relative;
-  text-align: center;
+  height: 100%;
 }
 
 .image-container img {
@@ -183,14 +183,23 @@ export default {
 .centered {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 10%;
   transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
 }
 
 .top-right {
   position: absolute;
-  top: 8px;
-  right: 16px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .join-button {
@@ -206,20 +215,11 @@ export default {
   color: aliceblue;
   margin-left: 10px;
   font-weight: bold;
-
+  color: #333;
   text-decoration: none;
   cursor: pointer;
 }
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
 
-
-h1 {
-  font-size: 3rem;
-  color: white;
-}
 
 .open-chat-button {
 

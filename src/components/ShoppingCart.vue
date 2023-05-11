@@ -11,7 +11,7 @@
       <div class="product-grid__image-wrapper">
         <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
         <div class="product-grid__add-to-cart">
-          <button class="btn btn-success">Add to cart</button> <p style="color:aliceblue">${{product.price}}</p>
+          <p style="color:aliceblue">${{product.price}}<button class="btn btn-success">Add to cart</button> </p>
         </div>
       </div>
     
@@ -44,8 +44,8 @@
         <tfoot>
           <tr>
             <td></td>
-            <td></td>
-            <td>Total:   ${{cartTotal}}</td>
+            <td>Total: </td>
+            <td> ${{cartTotal}}</td>
           
             <td></td>
           </tr>

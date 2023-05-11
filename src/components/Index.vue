@@ -1,12 +1,15 @@
 <template>
-  <div class="hero-image">
+<div class="hero-image">
   <div class="image-container">
-  <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
-  <div class="image-text">
-    <h1>We Food Delivery</h1>
-    <a href="https://polskoydm.pythonanywhere.com/user_register"><button>Join Us</button></a>
+    <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
+    <div class="image-text">
+      <h1>Wheels Delivery</h1>
+      <div class="buttons">
+        <a href="https://polskoydm.pythonanywhere.com/user_register"><button class="join-button">Join Us</button></a>
+        <span class="sign-in">Sign in</span>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 <div class="container">
     <!-- START THE FEATURETTES -->
@@ -186,18 +189,29 @@ h1 {
   color: white;
 }
 
-
-
-button {
-  padding: 0.5rem 0.5rem;
-  font-size: 1.2rem;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
 }
 
+.join-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+.sign-in {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .card-img-top {
   height: 200px;

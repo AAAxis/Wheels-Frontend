@@ -17,16 +17,15 @@
     
     </div>
   </div>
+<br>
 
-
-      <h2>Cart</h2>
+      <h2>Shopping Cart</h2>
       <table class="cart-table">
         <thead>
           <tr>
             <th>Product</th>
             <th>Quantity</th>
             <th>Price</th>
-            <th>Total</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -35,7 +34,6 @@
             <td>{{item.product.name}}</td>
             <td>{{item.quantity}}</td>
             <td>${{item.product.price}}</td>
-            <td>${{item.product.price * item.quantity}}</td>
             <td>
   <button class="btn btn-danger" @click="removeFromCart(index)">
     <i class="fas fa-trash"></i>
@@ -47,8 +45,8 @@
           <tr>
             <td></td>
             <td></td>
-            <td>Total:</td>
-            <td>${{cartTotal}}</td>
+            <td>Total:   ${{cartTotal}}</td>
+          
             <td></td>
           </tr>
         </tfoot>

@@ -46,8 +46,8 @@
               </div>
             </div>
             <div class="d-flex flex-row align-items-center">
-              <span class="d-block ml-3 font-weight-bold">${{ item.product.price }}</span>
-              <button style=" margin-left: 2rem;" @click="removeFromCart(index)"><i class="fa fa-trash-o ml-3 text-white-50"></i></button>
+              <span class="d-block ml-3 font-weight-bold">${{ item.product.price }}.0</span>
+              <button style=" margin-left: 2rem;" @click="removeFromCart(index)"><i class="fa fa-trash-o ml-3 text-red-50"></i></button>
           
             </div>
           </div>

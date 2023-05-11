@@ -1,12 +1,14 @@
 <template>
   
-  <div class="hero-image">
-  <div class="hero-text">
-    <h1>I am John Doe</h1>
-    <p>And I'm a Photographer</p>
-    <button>Hire me</button>
+  <div class="image-container">
+  <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
+  <div class="image-text">
+    <h1>We Deliver Food</h1>
+    <button>Join Us</button>
   </div>
 </div>
+
+
     <!-- START THE FEATURETTES -->
 <br>
   <h1 style="text-align:center; margin:3rem;">Favourites Near You</h1>
@@ -25,7 +27,7 @@
             </a>
                <div class="card-body">
                 <h5 class="card-title">{{ branch.name }}</h5>
-              
+              <p>20 min - $0 Delivery fee</p>
               
               </div>
             </div>
@@ -151,36 +153,43 @@ export default {
 </script>
 
 <style>
-
-
-body, html {
-    height: 50%;
-}
-
-/* The hero image */
-.hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png');
-
-  /* Set a specific height */
-  height: 50%;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.image-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-/* Place text in the middle of the image */
-.hero-text {
-  text-align: center;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
 }
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+
 
 .card-img-top {
   height: 200px;

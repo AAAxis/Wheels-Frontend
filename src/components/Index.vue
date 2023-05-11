@@ -4,7 +4,7 @@
   <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
   <div class="image-text">
     <h1>We Food Delivery</h1>
-    <button>Join Us</button>
+    <a href="/user_register"><button>Join Us</button></a>
   </div>
 </div>
 </div>

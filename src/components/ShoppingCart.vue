@@ -32,7 +32,7 @@
       
         <div class="d-flex justify-content-between">
           <div class="d-flex flex-row align-items-center"><span class="text-black-50">Total: </span>
-            <div class="price ml-2"><span class="mr-1">${{cartTotal}}</span></div>
+            <div class="price ml-2"><span class="mr-1"> ${{cartTotal}}</span></div>
           </div>
         </div>
 

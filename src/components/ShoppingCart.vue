@@ -1,18 +1,21 @@
 <template>
-   <div class="product-grid">
+ <div class="product-grid">
   <h1>Products</h1>
   <div class="product-grid__cards">
-    <div v-for="product in products" :key="product.id" class="product-grid__card" @click="product.selected = !product.selected">
-      <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
+    <div v-for="product in products" :key="product.id" class="product-grid__card" @click="addToCart(product)">
+      <div class="product-grid__image-wrapper">
+        <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
+        <div class="product-grid__add-to-cart">
+          <button class="btn btn-success">Add to cart</button>
+        </div>
+      </div>
       <div class="product-grid__info">
         <h3 class="product-grid__name">{{product.name}}</h3>
         <p class="product-grid__price">{{product.price}}$</p>
-        <div class="product-grid__actions" v-if="product.selected">
-          <button class="btn btn-success" @click="addToCart(product)">Add to cart</button>
-        </div>
       </div>
     </div>
   </div>
+
 
       <h2>Cart</h2>
       <table class="cart-table">
@@ -29,8 +32,8 @@
           <tr v-for="(item, index) in cartItems" :key="index">
             <td>{{item.product.name}}</td>
             <td>{{item.quantity}}</td>
-            <td>{{item.product.price}}$</td>
-            <td>{{item.product.price * item.quantity}}$</td>
+            <td>${{item.product.price}}</td>
+            <td>${{item.product.price * item.quantity}}</td>
             <td>
   <button class="btn btn-danger" @click="removeFromCart(index)">
     <i class="fas fa-trash"></i>
@@ -43,7 +46,7 @@
             <td></td>
             <td></td>
             <td>Total:</td>
-            <td>{{cartTotal}}$</td>
+            <td>${{cartTotal}}</td>
             <td></td>
           </tr>
         </tfoot>
@@ -133,6 +136,21 @@ export default {
 
 <style>
 
+.product-grid__add-to-cart {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-grid__image-wrapper:hover .product-grid__add-to-cart {
+  display: block;
+}
 
 
 .product-grid {

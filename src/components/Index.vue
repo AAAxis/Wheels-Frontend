@@ -1,5 +1,5 @@
 <template>
-  
+  <div class="hero-image">
   <div class="image-container">
   <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
   <div class="image-text">
@@ -7,8 +7,7 @@
     <button>Join Us</button>
   </div>
 </div>
-
-
+</div>
 <div class="container">
     <!-- START THE FEATURETTES -->
 <br>
@@ -154,12 +153,16 @@ export default {
 </script>
 
 <style>
-.image-container {
-  position: relative;
+.hero-image {
   height: 50vh;
 }
 
-img {
+.image-container {
+  position: relative;
+  height: 100%;
+}
+
+.image-container img {
   position: absolute;
   top: 0;
   left: 0;
@@ -167,6 +170,7 @@ img {
   height: 100%;
   object-fit: cover;
 }
+
 
 .image-text {
   position: absolute;

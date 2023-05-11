@@ -58,10 +58,10 @@
   </div>
 </div>
 
-            <h1>Total: ${{cartTotal}}</h1>
+            <h3>Total: ${{cartTotal}}</h3>
      
       <br>
-      <button class="btn btn-primary" @click="checkout">Checkout</button>
+      <button style="margin: 1rem;" class="btn btn-primary" @click="checkout">Checkout</button>
     </div>
   </template>
   

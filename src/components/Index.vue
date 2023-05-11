@@ -63,7 +63,33 @@
 
     <!-- START THE FEATURETTES -->
 <br>
-  <h1 style="text-align:center; margin:3rem;">Products For Bussines</h1>
+  <h1 style="text-align:center; margin:3rem;">Favourites Near You</h1>
+
+
+
+  <div class="row">
+      <div class="col-12">
+        <button class="open-chat-button" @click="showChat = true"> <i class="fas fa-comments"></i></button>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="branch in branches" :key="branch.id">
+            <div class="card">
+              <img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{ branch.address }}</h5>
+                <p class="card-text">{{ branch.name }}</p>
+                <a :href="`/${branch.token}/shop`" class="btn btn-primary">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h1 style="text-align:center; margin:3rem;">Products For Bussines</h1>
+
  <hr class="featurette-divider">
 <br>
     <div class="row featurette">
@@ -145,29 +171,9 @@
 
 
   
-  <div class="container">
 
-    <div class="row">
-      <div class="col-12">
-        <button class="open-chat-button" @click="showChat = true"> <i class="fas fa-comments"></i></button>
-      </div>
-      <div class="col-12">
-        <div class="row">
-          <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="branch in branches" :key="branch.id">
-            <div class="card">
-              <img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">{{ branch.address }}</h5>
-                <p class="card-text">{{ branch.name }}</p>
-                <a :href="`/${branch.token}/shop`" class="btn btn-primary">Shop Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <LiveChat v-if="showChat" @close="showChat = false" />
-  </div>
+
 </template>
 
 <script>

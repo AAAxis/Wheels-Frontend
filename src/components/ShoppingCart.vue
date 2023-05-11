@@ -31,8 +31,8 @@
         <hr>
       
         <div class="d-flex justify-content-between">
-          <div class="d-flex flex-row align-items-center"><span class="text-black-50">Sort by:</span>
-            <div class="price ml-2"><span class="mr-1">price</span><i class="fa fa-angle-down"></i></div>
+          <div class="d-flex flex-row align-items-center"><span class="text-black-50">Total: </span>
+            <div class="price ml-2"><span class="mr-1">${{cartTotal}}</span></div>
           </div>
         </div>
 
@@ -58,7 +58,7 @@
   </div>
 </div>
 
-            <h3>Total: ${{cartTotal}}</h3>
+           
      
       <br>
       <button style="margin: 1rem;" class="btn btn-primary" @click="checkout">Checkout</button>

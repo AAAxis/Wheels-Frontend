@@ -7,11 +7,11 @@
       <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
       <div class="centered"><h1>Wheels Delivery</h1></div>
         <div class="top-right">
+          
+          <a href="https://polskoydm.pythonanywhere.com/user_login" class="sign-in">Sign in</a>
           <a href="https://polskoydm.pythonanywhere.com/user_register">
             <button class="join-button">Sign Up</button>
           </a>
-          <a href="https://polskoydm.pythonanywhere.com/user_login" class="sign-in">Sign in</a>
-       
       </div>
  
     </div>

@@ -5,9 +5,11 @@
     <div class="image-text">
       <h1>Wheels Delivery</h1>
       <div class="buttons">
-        <a href="https://polskoydm.pythonanywhere.com/user_register"><button class="join-button">Join Us</button></a>
-        <span class="sign-in">Sign in</span>
-      </div>
+  <a href="https://polskoydm.pythonanywhere.com/user_register">
+    <button class="join-button">Sign Up</button>
+  </a>
+  <a href="https://polskoydm.pythonanywhere.com/user_login" class="sign-in">Sign in</a>
+</div>
     </div>
   </div>
 </div>
@@ -191,10 +193,13 @@ h1 {
 
 .buttons {
   position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
 
 .join-button {
   background-color: #4CAF50;
@@ -206,10 +211,11 @@ h1 {
 }
 
 .sign-in {
+  color:aliceblue;
   margin-left: 10px;
   font-weight: bold;
   color: #333;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
 

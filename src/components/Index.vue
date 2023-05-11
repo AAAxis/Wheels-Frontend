@@ -89,7 +89,8 @@
  
     <!-- Three columns of text below the carousel -->
     <div style='margin-top:10px;' class="row">
-      <h1 style="text-align:center; margin:3rem;">R&D Team</h1>
+      <h1>R&D Team</h1>
+
 
       <div class="col-lg-4">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot1.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>

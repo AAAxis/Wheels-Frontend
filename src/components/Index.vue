@@ -1,18 +1,18 @@
 <template>
 <div class="hero-image">
-  <div class="image-container">
-    <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
-    <div class="image-text">
-      <h1>Wheels Delivery</h1>
-      <div class="buttons">
-  <a href="https://polskoydm.pythonanywhere.com/user_register">
-    <button class="join-button">Sign Up</button>
-  </a>
-  <a href="https://polskoydm.pythonanywhere.com/user_login" class="sign-in">Sign in</a>
-</div>
+    <div class="image-container">
+      <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
+      <div class="image-text">
+        <h1>Wheels Delivery</h1>
+        <div class="buttons">
+          <a href="https://polskoydm.pythonanywhere.com/user_register">
+            <button class="join-button">Sign Up</button>
+          </a>
+          <a href="https://polskoydm.pythonanywhere.com/user_login" class="sign-in">Sign in</a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 <div class="container">
     <!-- START THE FEATURETTES -->
 <br>
@@ -216,8 +216,6 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
-
-
 .card-img-top {
   height: 200px;
   object-fit: cover;

@@ -37,8 +37,6 @@
     </div>
 
 
-    <h1 style="text-align:center; margin:3rem;">Products For Bussines</h1>
-
  <hr class="featurette-divider">
 <br>
     <div class="row featurette">
@@ -88,10 +86,11 @@
     <hr class="featurette-divider">
     <!-- /END THE FEATURETTES -->
 <br>
-  <h1 style="text-align:center; margin:3rem;">R&D Team</h1>
-
+ 
     <!-- Three columns of text below the carousel -->
     <div style='margin-top:10px;' class="row">
+      <h1 style="text-align:center; margin:3rem;">R&D Team</h1>
+
       <div class="col-lg-4">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot1.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
 
@@ -203,20 +202,6 @@ button {
   object-fit: cover;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
 
 
 

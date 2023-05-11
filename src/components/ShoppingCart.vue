@@ -1,19 +1,19 @@
 <template>
-    <div class="product-grid">
-      <h1>Products</h1>
-      <div class="product-grid__cards">
-        <div v-for="product in products" :key="product.id" class="product-grid__card">
-          <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
-          <div class="product-grid__info">
-            <h3 class="product-grid__name">{{product.name}}</h3>
-            <p class="product-grid__description">{{product.description}}</p>
-            <p class="product-grid__price">{{product.price}}$</p>
-            <div class="product-grid__actions">
-              <button class="btn btn-success" @click="addToCart(product)">Add to cart</button>
-            </div>
-          </div>
+   <div class="product-grid">
+  <h1>Products</h1>
+  <div class="product-grid__cards">
+    <div v-for="product in products" :key="product.id" class="product-grid__card" @click="product.selected = !product.selected">
+      <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
+      <div class="product-grid__info">
+        <h3 class="product-grid__name">{{product.name}}</h3>
+        <p class="product-grid__price">{{product.price}}$</p>
+        <div class="product-grid__actions" v-if="product.selected">
+          <button class="btn btn-success" @click="addToCart(product)">Add to cart</button>
         </div>
       </div>
+    </div>
+  </div>
+
       <h2>Cart</h2>
       <table class="cart-table">
         <thead>

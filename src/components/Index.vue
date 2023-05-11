@@ -9,7 +9,7 @@
         <div class="top-right">
           
           <a href="https://polskoydm.pythonanywhere.com/user_login" class="sign-in">Sign in</a>
-          <a href="https://polskoydm.pythonanywhere.com/user_register">
+          <a style="margin-left:1rem;" href="https://polskoydm.pythonanywhere.com/user_register">
             <button class="join-button">Sign Up</button>
           </a>
       </div>

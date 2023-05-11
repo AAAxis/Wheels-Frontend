@@ -38,6 +38,7 @@
 
 
  <hr class="featurette-divider">
+ <h1 style="text-align:center; margin:3rem; color:black;">Products For Bussiness</h1>
 <br>
     <div class="row featurette">
       <div class="col-md-7">
@@ -89,7 +90,7 @@
  
     <!-- Three columns of text below the carousel -->
     <div style='margin-top:10px;' class="row">
-      <h1>R&D Team</h1>
+      <h1 style="text-align:center; margin:3rem; color:black;">R&D Team</h1>
 
 
       <div class="col-lg-4">

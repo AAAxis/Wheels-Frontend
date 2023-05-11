@@ -1,7 +1,6 @@
 <template>
 <div class="hero-image">
-  <div class="image-text"> 
-        <h1>Wheels Delivery</h1></div>
+
     <div class="image-container">
     
 

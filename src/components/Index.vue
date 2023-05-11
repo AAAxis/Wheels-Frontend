@@ -174,13 +174,14 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
 }
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  color: white;
 }
+
+
 
 button {
   padding: 1rem 1rem;

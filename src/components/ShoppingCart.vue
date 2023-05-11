@@ -1,5 +1,6 @@
 <template>
- <div class="product-grid">
+
+<div class="product-grid">
   <h1>Products</h1>
   <div class="product-grid__cards">
     <div v-for="product in products" :key="product.id" class="product-grid__card" @click="addToCart(product)">
@@ -136,20 +137,26 @@ export default {
 
 <style>
 
+.product-grid__card {
+  position: relative;
+}
+
 .product-grid__add-to-cart {
-  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  text-align: center;
-  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.product-grid__image-wrapper:hover .product-grid__add-to-cart {
-  display: block;
+.product-grid__card:hover .product-grid__add-to-cart {
+  opacity: 1;
+}
+
+.product-grid__add-to-cart button {
+  margin: 10px;
 }
 
 

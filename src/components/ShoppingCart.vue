@@ -11,7 +11,7 @@
       <div class="product-grid__image-wrapper">
         <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
         <div class="product-grid__add-to-cart">
-        <button class="btn btn-success">Add - ${{product.price}}.0</button> 
+        <button class="btn btn-success">Add ${{product.price}}.0</button> 
         </div>
       </div>
     

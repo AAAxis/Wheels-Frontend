@@ -203,7 +203,6 @@ export default {
 
   </script>
 
-
 <style>
 body{
     background:#f5f5f5;

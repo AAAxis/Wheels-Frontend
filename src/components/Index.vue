@@ -183,9 +183,9 @@ export default {
 .centered {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  text-align: left;
+  text-align: center;
 }
 
 h1 {
@@ -215,7 +215,6 @@ h1 {
   color: aliceblue;
   margin-left: 10px;
   font-weight: bold;
-  color: #333;
   text-decoration: none;
   cursor: pointer;
 }

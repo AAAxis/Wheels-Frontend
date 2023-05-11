@@ -3,15 +3,16 @@
   <div class="image-container">
   <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
   <div class="image-text">
-    <h1>We Deliver Food</h1>
+    <h1>We Food Delivery</h1>
     <button>Join Us</button>
   </div>
 </div>
 
 
+<div class="container">
     <!-- START THE FEATURETTES -->
 <br>
-  <h1 style="text-align:center; margin:3rem;">Favourites Near You</h1>
+  <h2 style="text-align:center; margin:2rem;">Favourites Near You</h2>
 
 
 
@@ -118,7 +119,7 @@
 
 
 
-
+</div>
   
 
     <LiveChat v-if="showChat" @close="showChat = false" />
@@ -181,8 +182,8 @@ h1 {
 }
 
 button {
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
   background-color: #333;
   color: white;
   border: none;

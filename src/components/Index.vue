@@ -205,7 +205,7 @@ h1 {
 .join-button {
   background-color: #4CAF50;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;

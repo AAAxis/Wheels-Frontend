@@ -1,66 +1,12 @@
 <template>
   
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-           
-
-      <img style="height:25rem;   object-position: center;  object-fit: none;
-      background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img3.jpg" alt="Third slide">
-       
-      <div class="container">
-              <div class="carousel-caption text-start">
-            
-                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img style="height:25rem;   object-position: center;  object-fit: none;
-            background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img2.jpg"  alt="Second slide">
-               <div class="container">
-              <div class="carousel-caption">
-               
-                <p><a class="btn btn-lg btn-primary" href="#">Become a Partner</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img style="height:25rem;   object-position: center;  object-fit: none;
-            background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/img1.jpg"  alt="First slide">
-                 <div class="container">
-              <div class="carousel-caption text-end">
-              
-                <p><a class="btn btn-lg btn-primary" href="#">Admin Panel</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-
-
- 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-
-
-
+  <div class="hero-image">
+  <div class="hero-text">
+    <h1>I am John Doe</h1>
+    <p>And I'm a Photographer</p>
+    <button>Hire me</button>
+  </div>
+</div>
     <!-- START THE FEATURETTES -->
 <br>
   <h1 style="text-align:center; margin:3rem;">Favourites Near You</h1>
@@ -75,11 +21,12 @@
         <div class="row">
           <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="branch in branches" :key="branch.id">
             <div class="card">
-              <img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">{{ branch.address }}</h5>
-                <p class="card-text">{{ branch.name }}</p>
-                <a :href="`/${branch.token}/shop`" class="btn btn-primary">Shop Now</a>
+              <a :href="`/${branch.token}/shop`" class="btn btn-primary"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
+            </a>
+               <div class="card-body">
+                <h5 class="card-title">{{ branch.name }}</h5>
+              
+              
               </div>
             </div>
           </div>
@@ -246,5 +193,35 @@ export default {
 
 .open-chat-button i {
   margin-right: 0.5rem;
+}
+
+
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 </style>

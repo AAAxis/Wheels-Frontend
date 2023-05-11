@@ -205,7 +205,7 @@ export default {
   color: aliceblue;
   margin-left: 10px;
   font-weight: bold;
-  color: #333;
+
   text-decoration: none;
   cursor: pointer;
 }

@@ -177,7 +177,6 @@ export default {
   object-fit: cover;
 }
 
-
 .image-text {
   position: absolute;
   top: 50%;
@@ -200,7 +199,6 @@ h1 {
   align-items: center;
 }
 
-
 .join-button {
   background-color: #4CAF50;
   color: white;
@@ -211,13 +209,14 @@ h1 {
 }
 
 .sign-in {
-  color:aliceblue;
+  color: aliceblue;
   margin-left: 10px;
   font-weight: bold;
   color: #333;
   text-decoration: none;
   cursor: pointer;
 }
+
 
 .card-img-top {
   height: 200px;

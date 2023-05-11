@@ -38,7 +38,7 @@
 
 
  <hr class="featurette-divider">
- <h1 style="text-align:center; margin:3rem; color:black;">Products For Bussiness</h1>
+ <h2 style="text-align:center; margin:2rem; color:black;">Products For Bussiness</h2>
 <br>
     <div class="row featurette">
       <div class="col-md-7">

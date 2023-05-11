@@ -4,7 +4,7 @@
   <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
   <div class="image-text">
     <h1>We Food Delivery</h1>
-    <a href="/user_register"><button>Join Us</button></a>
+    <a href="https://polskoydm.pythonanywhere.com/user_register"><button>Join Us</button></a>
   </div>
 </div>
 </div>
@@ -21,7 +21,7 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="branch in branches" :key="branch.id">
+          <div class="col-md-3 col-sm-4 col-xs-6 mb-4" v-for="branch in branches" :key="branch.id">
             <div class="card">
               <a :href="`/${branch.token}/shop`" ><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
             </a>

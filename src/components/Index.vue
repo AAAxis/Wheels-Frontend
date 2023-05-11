@@ -6,7 +6,7 @@
     
 
       <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
-     
+      <div class="centered"><h1>Wheels Delivery</h1></div>
         <div class="top-right">
           <a href="https://polskoydm.pythonanywhere.com/user_register">
             <button class="join-button">Sign Up</button>
@@ -181,14 +181,12 @@ export default {
   object-fit: cover;
 }
 
-.image-text {
+.centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
-
 
 .top-right {
   position: absolute;

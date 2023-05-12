@@ -31,9 +31,6 @@
   </nav>
 
 
-<br><br>
-
-
   </template>
   
   <script>

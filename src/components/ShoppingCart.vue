@@ -7,6 +7,7 @@
 
   <div style="padding: 2rem;" class="container">
   <h2>Products</h2>
+  <br>
   <div class="product-grid__cards">
     <div v-for="product in products" :key="product.id" class="product-grid__card" @click="addToCart(product)">
       <div class="product-grid__info">

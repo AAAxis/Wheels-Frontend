@@ -57,12 +57,14 @@
 
 
       <div class="col-md-5 offset-md-1 mb-3">
-        <form>
+        <form method="GET" action="https://polskoydm.pythonanywhere.com/subscribe">
           <h5>Subscribe</h5>
           <p>Monthly digest from us.</p>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-            <input  style="margin:2px;" id="newsletter1" type="text" class="form-control" placeholder="Email Address...">
-            <button style="margin-left:2px;" class="btn btn-primary" type="button">Subscribe</button>
+            <input  style="margin:2px;" name="email" id="newsletter1" type="text" class="form-control" placeholder="Email Address..." required>
+            <input  name="name" value="Anonim" hidden>
+            <input  name="text" value="New Subscriber" hidden>
+            <button type="submit" style="margin-left:2px;" class="btn btn-primary" type="button">Subscribe</button>
           </div>
         </form>
       </div>

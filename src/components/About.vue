@@ -12,17 +12,17 @@
 How Can Technology Improve Employee Satisfaction at Hospitality and Resorts?</p>
       </div>
       <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+        <form method="GET" action="https://polskoydm.pythonanywhere.com/subscribe" class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="floatingInput" class="form-control" id="floatingInput" placeholder="Name">
+            <input type="floatingInput" name="name" class="form-control" id="floatingInput" placeholder="Name">
             <label for="floatingInput">Name</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="" class="form-control" id="floatingInput" placeholder="Please Type..">
+            <input type="text" name="text" class="form-control" id="floatingInput" placeholder="Please Type..">
             <label for="floatingPassword">Message</label>
           </div>
           <button class="w-100 btn btn-lg btn-primary" type="submit">Lets Talk</button>

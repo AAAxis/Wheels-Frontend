@@ -11,9 +11,9 @@
             <div class="row">
                  <div class="col-lg-10 mx-auto mb-4">
                     <div class="section-title text-center ">
+                        <br>
                         <h3 class="top-c-sep">Grow your career with us</h3>
-                        <p>Lorem ipsum dolor sit detudzdae amet, rcquisc adipiscing elit. Aenean socada commodo
-                            ligaui egets dolor. Nullam quis ante tiam sit ame orci eget erovtiu faucid.</p>
+                      
                     </div>
                 </div>
             </div>
@@ -204,9 +204,6 @@ export default {
   </script>
 
 <style>
-body{
-    background:#f5f5f5;
-    margin-top:20px;}
 
 /* ===== Career ===== */
 .career-form {
@@ -243,7 +240,6 @@ body{
 }
 
 .career-form .custom-select {
-  background-color: rgba(255, 255, 255, 0.2);
   border: 0;
   padding: 12px 15px;
   color: #fff;

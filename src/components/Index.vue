@@ -1,4 +1,9 @@
 <template>
+  <div>
+    <Navbar />
+    <router-view />
+  </div>
+
 <div class="hero-image">
 
     <div class="image-container">

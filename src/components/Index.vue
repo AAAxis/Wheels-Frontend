@@ -24,7 +24,7 @@
 <div style="padding: 3rem;" class="container">
     <!-- START THE FEATURETTES -->
 <br>
-  <h2 style="text-align:center; margin:2rem;">Favourites Near You</h2>
+  <h2 style="text-align:center; margin:1rem;">Favourites Near You</h2>
 
 
 
@@ -65,7 +65,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">Ordering Application on Android & IOS  <span class="text-muted">Another day another meal.</span></h2>
-        <p class="lead">Have a great evening at your homes and maybe order some food.</p>
+        <p class="lead">Have a great evening at your homes and order some food.</p>
       </div>
       <div class="col-md-5">
          <img style="height:25rem;   object-position: center;  object-fit: none;

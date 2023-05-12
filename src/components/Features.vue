@@ -12,9 +12,8 @@
         </div>
         <div>
           <h3 class="fs-2">E-Commerce Platform</h3>
-          <p>Order and Reservation system that maximizes the efficiency
-
-your restaurant.</p>
+          <p>
+All-in-one fully-mobile solution which replaces your existing Point-of-Sale systems.</p>
           <a href="#" class="btn btn-primary">
             Details
           </a>
@@ -26,7 +25,7 @@ your restaurant.</p>
         </div>
         <div>
           <h3 class="fs-2">API Delivery Integration</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <p>All in One Hub solution, we integrate multiple Delivery systems, our partners Wolt, Just Eat, Uber</p>
           <a href="#" class="btn btn-primary">
             Details
           </a>
@@ -40,7 +39,7 @@ your restaurant.</p>
           <h3 class="fs-2">Inventory Tracking</h3>
           <p>
 
-Everything the restaurant owner needs in order to maintain, control, and run the business from the palm of their hand.</p>
+Restaurant owner needs maintain, control, and run the business from the palm of their hand.</p>
           <a href="#" class="btn btn-primary">
             Details
           </a>

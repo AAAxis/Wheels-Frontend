@@ -21,7 +21,7 @@
  
     </div>
   </div>
-<div class="container">
+<div style="padding: 3rem;" class="container">
     <!-- START THE FEATURETTES -->
 <br>
   <h2 style="text-align:center; margin:2rem;">Favourites Near You</h2>
@@ -29,25 +29,34 @@
 
 
   <div class="row">
-      <div class="col-12">
-        <button class="open-chat-button" @click="showChat = true"> <i class="fas fa-comments"></i></button>
-      </div>
-      <div class="col-12">
-        <div class="row">
-          <div class="col-md-3 col-sm-4 col-xs-6 mb-4" v-for="branch in branches" :key="branch.id">
-            <div class="card">
-              <a :href="`/${branch.token}/shop`" ><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top">
-            </a>
-               <div class="card-body">
-                <h5 class="card-title">{{ branch.name }}</h5>
-              <p>20 min - $0 Delivery fee</p>
-              
-              </div>
-            </div>
+  <div class="col-12">
+    <button class="open-chat-button" @click="showChat = true"> <i class="fas fa-comments"></i></button>
+  </div>
+  <div class="col-12">
+    <div class="row">
+      <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="(branch, index) in branches" :key="branch.id">
+        <div class="card">
+          <a :href="`/${branch.token}/shop`"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{ branch.name }}</h5>
+            <p>20 min - $0 Delivery</p>
           </div>
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="(branch, index) in branches" :key="branch.id" v-if="index % 2 === 1">
+        <div class="card">
+          <a :href="`/${branch.token}/shop`"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{ branch.name }}</h5>
+            <p>20 min - $0 Delivery</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
  <hr class="featurette-divider">
@@ -191,7 +200,7 @@ h1 {
 
 
 .open-chat-button {
-
+  z-index: 1;
   position: fixed;
   bottom: 20px;
   right: 20px;

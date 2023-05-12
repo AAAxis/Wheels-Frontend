@@ -82,9 +82,6 @@
     <hr class="featurette-divider">
 <br>
 
-
-
-
     <div class="row featurette">
        <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">Admin Dashboard <span class="text-muted">Monitor and manage your transaction operations</span></h2>
@@ -101,39 +98,7 @@
     <!-- /END THE FEATURETTES -->
 <br>
  
-    <!-- Three columns of text below the carousel -->
-    <div style='margin-top:10px;' class="row">
-      <h2 style="text-align:center; margin:3rem; color:black;">Our R&D Team</h2>
-
-
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot1.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
-
-        <h2 class="fw-normal">Roman Potchman</h2>
-        <p>Operation Manager</p>
-        <p><a class="btn btn-secondary" href="https://www.facebook.com/romchik2802">Contact &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot2.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
-
-        <h2 class="fw-normal">Dmitry Polskoy</h2>
-        <p>Solution Architect</p>
-        <p><a class="btn btn-secondary" href="https://www.facebook.com/polskoydm">Contact &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot3.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
-
-        <h2 class="fw-normal">Kateryna Trojan</h2>
-        <p>UX/UI Developer</p>
-        <p><a class="btn btn-secondary" href="https://www.instagram.com/troyanushka">Contact &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-
-
-</div>
-  
+  </div>
 
     <LiveChat v-if="showChat" @close="showChat = false" />
 

@@ -2,7 +2,7 @@
 
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Expand at sm</a>
+      <a style="margin-left: 1rem;" class="navbar-brand" href="#">Wheels Delivery</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,13 +16,13 @@
             <a class="nav-link" href="/careers">Careers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pricing">Pricing</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/features">Features</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/news">News</a>
           </li>
         </ul>
       

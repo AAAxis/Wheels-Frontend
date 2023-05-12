@@ -3,21 +3,52 @@
       <Navbar />
       <router-view />
     </div>
-    <div class="container my-5">
-  <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
-    <button type="button" class="position-absolute top-0 end-0 p-3 m-3 btn-close bg-secondary bg-opacity-10 rounded-pill" aria-label="Close"></button>
-    <svg class="bi mt-5 mb-3" width="48" height="48"><use xlink:href="#check2-circle"></use></svg>
-    <h1 class="text-body-emphasis">Placeholder jumbotron</h1>
-    <p class="col-lg-6 mx-auto mb-4">
-      This faded back jumbotron is useful for placeholder content. It's also a great way to add a bit of context to a page or section when no content is available and to encourage visitors to take a specific action.
-    </p>
-    <button class="btn btn-primary px-5 mb-5" type="button">
-      Call to action
-    </button>
-  </div>
-</div>
-</template>
+    <div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Our Products</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <img width="50" height="50" src="https://www.iconpacks.net/icons/2/free-store-icon-2017-thumb.png">
+        </div>
+        <div>
+          <h3 class="fs-2">E-Commerce Platform</h3>
+          <p>Order and Reservation system that maximizes the efficiency
 
+your restaurant.</p>
+          <a href="#" class="btn btn-primary">
+            Details
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <img width="50" height="50" src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Settings-icon.png">
+        </div>
+        <div>
+          <h3 class="fs-2">API Delivery Integration</h3>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="btn btn-primary">
+            Details
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <img width="50" height="50" src="https://png.pngtree.com/png-clipart/20201225/ourlarge/pngtree-ios-camera-icon-hand-drawn-png-image_2609845.jpg">
+             </div>
+        <div>
+          <h3 class="fs-2">Inventory Tracking</h3>
+          <p>
+
+Everything the restaurant owner needs in order to maintain, control, and run the business from the palm of their hand.</p>
+          <a href="#" class="btn btn-primary">
+            Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+    </template>
 
 <script>
 

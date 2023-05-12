@@ -3,7 +3,7 @@ import Home from './components/Index.vue';
 import ShoppingCart from './components/ShoppingCart.vue';
 import Careers from './components/Careers.vue';
 import About from './components/About.vue';
-import Pricing from './components/Pricing.vue';
+import News from './components/News.vue';
 import Features from './components/Features.vue';
 
 
@@ -19,9 +19,9 @@ const routes = [
     component: About,
   },
   {
-    path: '/pricing',
-    name: 'Pricing',
-    component: Pricing,
+    path: '/news',
+    name: 'News',
+    component: News,
   },
   {
     path: '/',

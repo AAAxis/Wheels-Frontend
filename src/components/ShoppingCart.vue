@@ -1,7 +1,12 @@
 <template>
-
+   <div>
+      <Navbar />
+      <router-view />
+    </div>
 <div class="product-grid">
-  <h1>Products</h1>
+
+  <div style="padding: 2rem;" class="container">
+  <h2>Products</h2>
   <div class="product-grid__cards">
     <div v-for="product in products" :key="product.id" class="product-grid__card" @click="addToCart(product)">
       <div class="product-grid__info">
@@ -17,8 +22,8 @@
     
     </div>
   </div>
-<br>
 
+</div>
 
 
 
@@ -27,7 +32,7 @@
   <div class="row no-gutters">
     <div class="col-md-8">
       <div class="product-details mr-2">
-        <div class="d-flex flex-row align-items-center"><i class="fa fa-shopping-cart"></i><span class="ml-2">Shopping Cart</span></div>
+        <div class="d-flex flex-row align-items-center"><i style="margin-right: 1rem;" class="fa fa-shopping-cart"></i><span class="ml-2"> Shopping Cart</span></div>
         <hr>
       
         <div class="d-flex justify-content-between">
@@ -47,8 +52,10 @@
             </div>
             <div class="d-flex flex-row align-items-center">
               <span class="d-block ml-3 font-weight-bold">${{ item.product.price }}.0</span>
-              <button style=" margin-left: 2rem;" @click="removeFromCart(index)"><i class="fa fa-trash-o ml-3 text-red-50"></i></button>
-          
+              <button class="btn btn-danger ml-3" style="margin-left: 2rem;" @click="removeFromCart(index)">
+  <i class="fa fa-trash-o text-white"></i>
+</button>
+
             </div>
           </div>
         </div>
@@ -68,8 +75,15 @@
   <script>
   import axios from 'axios';
 
+  import Navbar from './Navbar.vue'
+
+
 export default {
+  components: {
+    Navbar, },
+ 
   data() {
+    
     return {
       storeName: '',
       products: [],
@@ -77,6 +91,7 @@ export default {
       cartItems: [],
     }
   },
+
   created() {
     const storeId = window.location.href.split('/')[3];
     axios.get(`https://polskoydm.pythonanywhere.com/${storeId}/shop`)
@@ -144,7 +159,6 @@ export default {
 
 
 <style>
-
 .product-grid__card {
   position: relative;
 }
@@ -155,13 +169,11 @@ export default {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  
 }
 
-.product-grid__card:hover .product-grid__add-to-cart {
-  opacity: 1;
-}
+
+
 
 .product-grid__add-to-cart button {
   margin: 10px;

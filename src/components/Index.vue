@@ -36,7 +36,7 @@
     <div class="row">
       <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="(branch, index) in branches" :key="branch.id">
         <div class="card">
-          <a :href="`/${branch.token}/shop`"><img height="500px" :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top"></a>
+          <a :href="`/${branch.token}/shop`"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top"></a>
           <div class="card-body">
             <h5 class="card-title">{{ branch.name }}</h5>
             <p>20 min - $0 Delivery</p>
@@ -169,6 +169,16 @@ h1 {
   flex-direction: row;
   align-items: center;
 }
+
+
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+   /* 4:3 aspect ratio (change as needed) */
+  object-fit: cover; /* This ensures the image fills the container without distortion */
+}
+
 
 .join-button {
   background-color: #4CAF50;

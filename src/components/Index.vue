@@ -21,7 +21,7 @@
  
     </div>
   </div>
-<div style="padding: 3rem;" class="container">
+<div style="padding: 1rem;" class="container">
     <!-- START THE FEATURETTES -->
 <br>
   <h2 style="text-align:center; margin:1rem;">Favourites Near You</h2>

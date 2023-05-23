@@ -7,9 +7,9 @@
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
       <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Modern Restourant Management</h1>
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Startup Web-Development team, based in Israel</h1>
         <p class="col-lg-10 fs-4">
-How Can Technology Improve Employee Satisfaction at Hospitality and Resorts?</p>
+How Can Technology Improve Employee Satisfaction at your Bussines?</p>
       </div>
       <div class="col-md-10 mx-auto col-lg-5">
         <form method="GET" action="https://polskoydm.pythonanywhere.com/subscribe" class="p-4 p-md-5 border rounded-3 bg-body-tertiary">

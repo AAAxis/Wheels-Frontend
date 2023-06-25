@@ -1,168 +1,142 @@
 <template>
-    <div>
-      <Navbar />
-      <router-view />
-    </div>
+  <div>
+    <Navbar />
+    <router-view />
+  </div>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+    integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY="
+    crossorigin="anonymous"
+  />
+
+  <div class="container">
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
-
-<div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="career-search mb-60">
+          <form action="#" class="career-form mb-60">
             <div class="row">
-                 <div class="col-lg-10 mx-auto mb-4">
-                    <div class="section-title text-center ">
-                        <br>
-                        <h3 class="top-c-sep">Join Our Team</h3>
-                      
-                    </div>
+              <div class="col-md-6 col-lg-3 my-1">
+                <div style="width: 100%; height: 70px;" class="input-group position-relative">
+                  <input
+                    type="text"
+                    class="form-control"
+    
+                    placeholder="Enter Your Keywords"
+                    v-model="searchKeywords"
+                  />
+                  <div style="margin-left: 10px;" class="col-md-6 col-lg-3 my-2">
+                <button
+                  type="button"
+                  class="btn btn-lg btn-block btn-light btn-custom"
+                  @click="searchJobs"
+                >
+                  <i class="zmdi zmdi-search"></i>
+                </button>
+              </div>
                 </div>
+              </div>
+
+           
             </div>
+          </form>
 
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="career-search mb-60">
-
-                        <form action="#" class="career-form mb-60">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-3 my-3">
-                                    <div class="input-group position-relative">
-                                        <input type="text" class="form-control" placeholder="Enter Your Keywords" id="keywords">
-                                    </div>
-                                </div>
-                                 
-                            
-                                <div class="col-md-6 col-lg-3 my-3">
-                                    <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
-                                        Search
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-
-                        <div class="filter-result">
-                           <br>      <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
-                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
-                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                        FD
-                                    </div>
-                                    <div class="job-content">
-                                        <h5 class="text-center text-md-left">Front End Developer</h5>
-                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-time mr-2"></i> Full Time
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="job-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
-                                </div>
-                            </div>
-
-                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
-                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
-                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                        UX
-                                    </div>
-                                    <div class="job-content">
-                                        <h5 class="text-center text-md-left">Ui/Ux Developer</h5>
-                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-time mr-2"></i> Full Time
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="job-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
-                                </div>
-                            </div>
-
-                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
-                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
-                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                        GD
-                                    </div>
-                                    <div class="job-content">
-                                        <h5 class="text-center text-md-left">Graphic Designer</h5>
-                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-time mr-2"></i> Full Time
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="job-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
-                                </div>
-                            </div>
-
-                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
-                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
-                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                        JS
-                                    </div>
-                                    <div class="job-content">
-                                        <h5 class="text-center text-md-left">Javascript Developer</h5>
-                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-time mr-2"></i> Full Time
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="job-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+          <div class="filter-result">
+            <br />
+            <div
+              class="job-box d-md-flex align-items-center justify-content-between mb-30"
+              v-for="job in filteredJobs"
+              :key="job.id"
+            >
+              <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
+                  FD
                 </div>
+                <div class="job-content">
+                  <h5 class="text-center text-md-left">{{ job.title }}</h5>
+                  <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                    <li class="mr-md-4">
+                      <i class="zmdi zmdi-pin mr-2"></i> {{ job.location }}
+                    </li>
+                    <li class="mr-md-4">
+                      <i class="zmdi zmdi-money mr-2"></i> {{ job.salary }}
+                    </li>
+                    <li class="mr-md-4">
+                      <i class="zmdi zmdi-time mr-2"></i> {{ job.type }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="job-right my-4 flex-shrink-0">
+                <router-link :to="{ path: '/apply/' + job.id }" class="btn d-block w-100 d-sm-inline-block btn-light">
+  Apply now
+</router-link>
+              </div>
             </div>
-
+          </div>
         </div>
-  </template>
-  
-  <script>
-
-import Navbar from "./Navbar.vue";
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import axios from 'axios';
+import Navbar from './Navbar.vue'; // Import your Navbar component here
 
 export default {
-  name: "Careers",
   components: {
     Navbar,
   },
+  data() {
+    return {
+      jobs: [],
+      searchKeywords: '', // Holds the value of the search keywords
+    };
+  },
+  mounted() {
+    this.fetchJobs();
+  },
+  computed: {
+    filteredJobs() {
+      // Filter the jobs based on searchKeywords
+      if (this.searchKeywords) {
+        return this.jobs.filter((job) =>
+          job.title.toLowerCase().includes(this.searchKeywords.toLowerCase())
+        );
+      } else {
+        return this.jobs;
+      }
+    },
+  },
+  methods: {
+    fetchJobs() {
+      axios
+        .get('https://polskoydm.pythonanywhere.com/jobs') // Replace '/api/jobs' with your Flask API endpoint
+        .then((response) => {
+          this.jobs = response.data;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+    searchJobs() {
+      // Method to trigger the search based on searchKeywords
+      // You can perform additional logic here if needed
+    },
+
+    selectJob(jobId) {
+    this.selectedJobId = jobId;
+    router.push('/apply'); // Redirect to the "/apply" route
+  },
+  },
 };
+</script>
 
-  </script>
 
-<style>
+<style scoped>
 
 /* ===== Career ===== */
 .career-form {

@@ -4,6 +4,7 @@ import ShoppingCart from './components/ShoppingCart.vue';
 import Careers from './components/Careers.vue';
 import About from './components/About.vue';
 import News from './components/News.vue';
+import Apply from './components/Apply.vue';
 import Features from './components/Features.vue';
 
 
@@ -12,6 +13,11 @@ const routes = [
     path: '/features',
     name: 'Features',
     component: Features,
+  },
+  {
+    path: '/apply/:id',
+    name: 'Apply',
+    component: Apply, // Replace ApplyComponent with your actual component name
   },
   {
     path: '/about',

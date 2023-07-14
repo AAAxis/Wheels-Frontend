@@ -140,7 +140,7 @@ export default {
   };
   const form = document.createElement('form');
   form.method = 'POST';
-  form.action = 'https://polskoydm.pythonanywhere.com/checkout';
+  form.action = '/checkout';
   const itemsInput = document.createElement('input');
   itemsInput.name = 'items';
   itemsInput.value = JSON.stringify(data.items);

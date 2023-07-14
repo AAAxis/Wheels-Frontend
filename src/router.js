@@ -5,6 +5,7 @@ import Careers from './components/Careers.vue';
 import About from './components/About.vue';
 import News from './components/News.vue';
 import Apply from './components/Apply.vue';
+import Apply from './components/Checkout.vue';
 import Features from './components/Features.vue';
 
 
@@ -18,6 +19,11 @@ const routes = [
     path: '/apply/:id',
     name: 'Apply',
     component: Apply, // Replace ApplyComponent with your actual component name
+  },
+  {
+    path: '/checkout',
+    name: 'Checkout',
+    component: Checkout, // Replace ApplyComponent with your actual component name
   },
   {
     path: '/about',

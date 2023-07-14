@@ -28,7 +28,6 @@
 
 
 
-<link href="https://polskoydm.pythonanywhere.com/static/styles/checkout.css" rel="stylesheet">
 <div class="container mt-5 p-3 rounded cart">
   <div class="row no-gutters">
     <div class="col-md-8">

@@ -5,7 +5,7 @@ import Careers from './components/Careers.vue';
 import About from './components/About.vue';
 import News from './components/News.vue';
 import Apply from './components/Apply.vue';
-import Apply from './components/Checkout.vue';
+import Checkout from './components/Checkout.vue';
 import Features from './components/Features.vue';
 
 

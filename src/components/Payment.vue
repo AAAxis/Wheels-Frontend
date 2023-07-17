@@ -69,7 +69,9 @@
           <td>{{ address }}</td>
         </tr>
       </tbody>
-      <div id="stripe-checkout"></div>
+     
+      <form action="https://polskoydm.pythonanywhere.com/create-checkout-session" method="POST">
+      <button type="submit">Checkout</button>    </form>
     </table>
   </div>
 </template>

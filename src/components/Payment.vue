@@ -69,6 +69,7 @@
           <td>{{ address }}</td>
         </tr>
       </tbody>
+      <div id="stripe-checkout"></div>
     </table>
   </div>
 </template>

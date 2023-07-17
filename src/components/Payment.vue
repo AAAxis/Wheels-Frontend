@@ -70,10 +70,11 @@
         </tr>
       </tbody>
      
-      <form action="https://polskoydm.pythonanywhere.com/create-checkout-session" method="POST">
-      <button type="submit">Checkout</button>    </form>
+   
     </table>
   </div>
+  <form action="https://polskoydm.pythonanywhere.com/create-checkout-session" method="POST">
+      <button type="submit">Checkout</button>    </form>
 </template>
 
 <script>

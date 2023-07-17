@@ -3,24 +3,24 @@
     <h2>Payment</h2>
 
     <!-- Email Input -->
-    <div v-if="!paymentReceived" class="form-group">
+    <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" id="email" v-model="email" required>
     </div>
 
     <!-- Name Input -->
-    <div v-if="!paymentReceived" class="form-group">
+    <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" id="name" v-model="name" required>
     </div>
 
     <!-- Address Input -->
-    <div v-if="!paymentReceived" class="form-group">
+    <div class="form-group">
       <label for="address">Address:</label>
       <input type="text" id="address" v-model="address" required>
     </div>
 
-    <div v-if="!paymentReceived">
+    <div>
       <button @click="checkout">Proceed to Payment</button>
     </div>
 
@@ -54,27 +54,10 @@
       </tfoot>
     </table>
 
-    <table class="cart-table" v-if="paymentReceived">
-      <thead>
-        <tr>
-          <th>Email</th>
-          <th>Name</th>
-          <th>Address</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{{ email }}</td>
-          <td>{{ name }}</td>
-          <td>{{ address }}</td>
-        </tr>
-      </tbody>
      
    
-    </table>
   </div>
-  <form action="https://polskoydm.pythonanywhere.com/create-checkout-session" method="POST">
-      <button type="submit">Checkout</button>    </form>
+
 </template>
 
 <script>
@@ -128,28 +111,7 @@ export default {
         address: this.address,
       })
         .then(response => {
-          this.paymentReceived = true;
-          if (response.data.success) {
-            
-            
-            // Retrieve the client secret from the response
-            const clientSecret = response.data.client_secret;
-
-            // Initialize Stripe with your publishable API key
-            const stripe = Stripe('pk_test_51LXRaMDoWGog1gVB88ytV8ZVHdl4aZqKA6fImyAKhFPLrxFESftTeqLQIquHH18X2TDQUdbvMLDCRRfgPzeaa0cm00sUIflyfu');
-
-            // Create a new instance of Stripe Checkout
-            stripe.redirectToCheckout({
-              sessionId: clientSecret,
-            })
-              .then(result => {
-                // Handle any errors during the checkout process
-                console.log(result.error.message);
-                
-              });
-          } else {
-            // Handle any other response scenarios if needed
-          }
+          window.location.href = `https://polskoydm.pythonanywhere.com/create-checkout-session/${this.orderID}`;
         })
         .catch(error => {
           // Handle the error

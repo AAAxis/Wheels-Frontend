@@ -2,28 +2,6 @@
   <div>
     <h2>Payment</h2>
 
-    <!-- Email Input -->
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" v-model="email" required>
-    </div>
-
-    <!-- Name Input -->
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" v-model="name" required>
-    </div>
-
-    <!-- Address Input -->
-    <div class="form-group">
-      <label for="address">Address:</label>
-      <input type="text" id="address" v-model="address" required>
-    </div>
-
-    <div>
-      <button @click="checkout">Proceed to Payment</button>
-    </div>
-
     <table class="cart-table">
       <thead>
         <tr>
@@ -54,7 +32,29 @@
       </tfoot>
     </table>
 
-     
+   
+    <!-- Email Input -->
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" v-model="email" required>
+    </div>
+
+    <!-- Name Input -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" v-model="name" required>
+    </div>
+
+    <!-- Address Input -->
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" id="address" v-model="address" required>
+    </div>
+
+    <div>
+      <button @click="checkout">Proceed to Payment</button>
+    </div>
+  
    
   </div>
 

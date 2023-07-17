@@ -6,7 +6,6 @@ import About from './components/About.vue';
 import News from './components/News.vue';
 import Apply from './components/Apply.vue';
 import Payment from './components/Payment.vue';
-import WellKnown from './components/WellKnown.vue';
 import Features from './components/Features.vue';
 
 
@@ -15,11 +14,6 @@ const routes = [
     path: '/features',
     name: 'Features',
     component: Features,
-  },
-  {
-    path: '/.well-known',
-    name: 'WellKnown',
-    component: WellKnown, 
   },
   {
     path: '/apply/:id',

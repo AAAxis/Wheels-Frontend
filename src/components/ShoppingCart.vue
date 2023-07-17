@@ -28,6 +28,7 @@
 
 
 
+<link href="https://polskoydm.pythonanywhere.com/static/styles/checkout.css" rel="stylesheet">
 <div class="container mt-5 p-3 rounded cart">
   <div class="row no-gutters">
     <div class="col-md-8">
@@ -125,34 +126,33 @@ export default {
     },
 
     checkout() {
-  if (this.cartItems.length === 0) {
-    alert('Your cart is empty!');
-    return;
-  }
+      if (this.cartItems.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
   
-  const data = {
-    items: this.cartItems.map(item => ({
-      product_id: item.product.id,
-      quantity: item.quantity,
-    })),
-    total: this.cartTotal,
-  };
-  const form = document.createElement('form');
-  form.method = 'POST';
-  form.action = '/checkout';
-  const itemsInput = document.createElement('input');
-  itemsInput.name = 'items';
-  itemsInput.value = JSON.stringify(data.items);
-  form.appendChild(itemsInput);
-  const totalInput = document.createElement('input');
-  totalInput.name = 'total';
-  totalInput.value = data.total;
-  form.appendChild(totalInput);
-  document.body.appendChild(form);
-  form.submit();
-}
+      const data = {
+        items: this.cartItems.map(item => ({
+          product_id: item.product.id,
+          quantity: item.quantity,
+        })),
+        total: this.cartTotal,
+      };
+  
+      axios.post('https://polskoydm.pythonanywhere.com/checkout', data)
+        .then(response => {
+          const orderID = response.data.order_id;
+          this.cartItems = [];
+  
+          // Redirect to the payment page with the order ID
+          this.$router.push({ name: 'Payment', params: { orderID } });
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
   },
-}
+};
 
 
   </script>

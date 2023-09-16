@@ -10,13 +10,13 @@
     
 
       <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
-      <div class="centered"><h1>Wheels Works</h1></div>
+      <div class="centered"><h1>Wheels Delivery</h1></div>
         <div class="top-right">
           
-          <a href="https://polskoydm.pythonanywhere.com/user_login" class="sign-in">Sign in</a>
-          <a style="margin-left:1rem;" href="https://polskoydm.pythonanywhere.com/user_register">
-            <button class="join-button">Sign Up</button>
-          </a>
+
+       <a style="margin-left:1rem;" href="#" id="signup-button">
+    <button class="join-button">Sign Up</button>
+</a>
       </div>
  
     </div>
@@ -99,7 +99,7 @@
   </div>
 
     <LiveChat v-if="showChat" @close="showChat = false" />
-
+ <section id="registration-section">   </section>
 </template>
 
 <script>
@@ -116,6 +116,16 @@ export default {
       showChat: false
     };
   },
+    methods: {
+    scrollToRegistrationSection() {
+      // Scroll down the page to the registration section
+      var registrationSection = document.getElementById("registration-section");
+      if (registrationSection) {
+        registrationSection.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
+
   mounted() {
     axios
       .get('https://polskoydm.pythonanywhere.com/')

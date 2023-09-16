@@ -14,9 +14,8 @@
         <div class="top-right">
           
 
-     <a style="margin-left:1rem;" class="join-button" @click="scrollToBottom">
-      Sign Up
-    </a>
+  <button class="join-button" @click="scrollToBottom">Sign Up</button>
+
       </div>
  
     </div>
@@ -116,11 +115,11 @@ export default {
       showChat: false
     };
   },
-   methods: {
+ methods: {
     scrollToBottom() {
       window.scrollTo(0, document.body.scrollHeight);
     }
-  }
+  },
   mounted() {
     axios
       .get('https://polskoydm.pythonanywhere.com/')

@@ -117,14 +117,14 @@ export default {
     };
   },
  
-methods: {
-  scrollToAdminDashboard() {
-    const element = document.getElementById('admin-dashboard');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' }); // You can use 'auto' instead of 'smooth' for instant scrolling
-    }
+ methods: {
+    scrollToAdminDashboard() {
+      const element = document.getElementById('admin-dashboard');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' }); // You can use 'auto' instead of 'smooth' for instant scrolling
+      }
+    },
   },
-},
 
 mounted() {
   axios

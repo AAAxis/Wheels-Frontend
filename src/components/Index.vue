@@ -4,83 +4,102 @@
     <router-view />
   </div>
 
-  <div class="hero-image">
+<div class="hero-image">
+
     <div class="image-container">
+    
+
       <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
       <div class="centered"><h1>Wheels Delivery</h1></div>
-      <div class="top-right">
-        <a style="margin-left:1rem;" href="#" id="signup-button">
-          <button class="join-button" @click="scrollToAdminDashboard">Sign Up</button>
-        </a>
+        <div class="top-right">
+          
+
+     <a style="margin-left:1rem;" @click="scrollToBottom">
+      <button class="join-button">Sign Up</button>
+    </a>
       </div>
+ 
     </div>
   </div>
-
-  <div style="padding: 1rem;" class="container">
+<div style="padding: 1rem;" class="container">
     <!-- START THE FEATURETTES -->
-    <h2 style="text-align:center; margin:1rem;">Favourites Near You</h2>
+<br>
+  <h2 style="text-align:center; margin:1rem;">Favourites Near You</h2>
 
+
+
+  <div class="row">
+  <div class="col-12">
+    <button class="open-chat-button" @click="showChat = true"> <i class="fas fa-comments"></i></button>
+  </div>
+  <div class="col-12">
     <div class="row">
-      <div class="col-12">
-        <button class="open-chat-button" @click="showChat = true"> <i class="fas fa-comments"></i></button>
-      </div>
-      <div class="col-12">
-        <div class="row">
-          <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="(branch, index) in branches" :key="branch.id">
-            <div class="card">
-              <a :href="`/${branch.token}/shop`"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top"></a>
-              <div class="card-body">
-                <h5 class="card-title">{{ branch.name }}</h5>
-                <p>20 min - $0 Delivery</p>
-              </div>
-            </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="(branch, index) in branches" :key="branch.id">
+        <div class="card">
+          <a :href="`/${branch.token}/shop`"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{ branch.name }}</h5>
+            <p>20 min - $0 Delivery</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <hr class="featurette-divider">
-    <h2 style="text-align:center; margin:2rem; color:black;">Products For Business</h2>
 
+ <hr class="featurette-divider">
+ <h2 style="text-align:center; margin:2rem; color:black;">Products For Bussiness</h2>
+<br>
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">Ordering Application on Android & IOS  <span class="text-muted">Another day another meal.</span></h2>
         <p class="lead">Have a great evening at your homes and order some food.</p>
       </div>
       <div class="col-md-5">
-        <img style="height:25rem;   object-position: center;  object-fit: none; background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post1.jpg" alt="First Photo">
+         <img style="height:25rem;   object-position: center;  object-fit: none;
+  background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post1.jpg" alt="First Photo">
+
       </div>
     </div>
-
+<br>
     <hr class="featurette-divider">
-
+<br>
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading fw-normal lh-1">Driver Application <span class="text-muted">The interactive map view</span></h2>
         <p class="lead"> makes it easy for driver manage all the ongoing deliveries</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <img style="height:25rem;   object-position: center;  object-fit: none; background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post2.jpg" alt="Second Photo">
+          <img style="height:25rem;   object-position: center;  object-fit: none;
+  background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post2.jpg" alt="Second Photo">
+
       </div>
     </div>
-
+<br>
     <hr class="featurette-divider">
+<br>
 
-    <div class="row featurette" id="admin-dashboard">
-      <div class="col-md-7">
+    <div class="row featurette">
+       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">Admin Dashboard <span class="text-muted">Monitor and manage your transaction operations</span></h2>
         <p class="lead">that helps create excellent experiences with E-Commerce</p>
       </div>
-      <div class="col-md-5">
-        <img style="height:25rem;   object-position: center;  object-fit: none; background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post3.jpg" alt="Third photo">
-      </div>
-    </div>
+       <div class="col-md-5">
+              <img style="height:25rem;   object-position: center;  object-fit: none;
+  background-repeat: no-repeat;" class="d-block w-100" src="https://polskoydm.pythonanywhere.com/static/images/post3.jpg" alt="Third photo">
 
+          </div>
+    </div>
+<br>
     <hr class="featurette-divider">
     <!-- /END THE FEATURETTES -->
+<br>
+ 
   </div>
 
-  <LiveChat v-if="showChat" @close="showChat = false" />
+    <LiveChat v-if="showChat" @close="showChat = false" />
+
 </template>
 
 <script>
@@ -97,22 +116,16 @@ export default {
       showChat: false
     };
   },
- 
-  methods: {
-    scrollToAdminDashboard() {
-      const element = document.getElementById('admin-dashboard');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' }); // You can use 'auto' instead of 'smooth' for instant scrolling
-      }
-    },
-  },
-
+   methods: {
+    scrollToBottom() {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  }
   mounted() {
     axios
       .get('https://polskoydm.pythonanywhere.com/')
       .then(response => {
         this.branches = response.data;
-        this.scrollToAdminDashboard(); // Scroll to the last block
       })
       .catch(error => {
         console.error(error);
@@ -162,12 +175,15 @@ h1 {
   align-items: center;
 }
 
+
+
 .card-img-top {
   width: 100%;
   height: 200px;
    /* 4:3 aspect ratio (change as needed) */
   object-fit: cover; /* This ensures the image fills the container without distortion */
 }
+
 
 .join-button {
   background-color: #4CAF50;
@@ -185,6 +201,7 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
+
 
 .open-chat-button {
   z-index: 1;
@@ -204,4 +221,6 @@ h1 {
 .open-chat-button i {
   margin-right: 0.5rem;
 }
+
+
 </style>

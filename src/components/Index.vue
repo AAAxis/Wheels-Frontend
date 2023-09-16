@@ -80,7 +80,7 @@
     <hr class="featurette-divider">
 <br>
 
-    <div class="row featurette">
+    <div class="row featurette" id="admin-dashboard">
        <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">Admin Dashboard <span class="text-muted">Monitor and manage your transaction operations</span></h2>
         <p class="lead">that helps create excellent experiences with E-Commerce</p>
@@ -99,7 +99,7 @@
   </div>
 
     <LiveChat v-if="showChat" @close="showChat = false" />
- <section id="registration-section">   </section>
+
 </template>
 
 <script>
@@ -116,26 +116,27 @@ export default {
       showChat: false
     };
   },
-    methods: {
-    scrollToRegistrationSection() {
-      // Scroll down the page to the registration section
-      var registrationSection = document.getElementById("registration-section");
-      if (registrationSection) {
-        registrationSection.scrollIntoView({ behavior: "smooth" });
-      }
-    },
+ 
+ methods: {
+  scrollToAdminDashboard() {
+    const element = document.getElementById('admin-dashboard');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // You can use 'auto' instead of 'smooth' for instant scrolling
+    }
   },
+},
 
-  mounted() {
-    axios
-      .get('https://polskoydm.pythonanywhere.com/')
-      .then(response => {
-        this.branches = response.data;
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  },
+mounted() {
+  axios
+    .get('https://polskoydm.pythonanywhere.com/')
+    .then(response => {
+      this.branches = response.data;
+      this.scrollToAdminDashboard(); // Scroll to the last block
+    })
+    .catch(error => {
+      console.error(error);
+    });
+},
 };
 </script>
 

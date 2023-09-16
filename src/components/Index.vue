@@ -14,8 +14,8 @@
         <div class="top-right">
           
 
-     <a style="margin-left:1rem;" @click="scrollToBottom">
-      <button class="join-button">Sign Up</button>
+     <a style="margin-left:1rem;" class="join-button" @click="scrollToBottom">
+      Sign Up
     </a>
       </div>
  

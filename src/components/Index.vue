@@ -14,8 +14,8 @@
         <div class="top-right">
           
 
-       <a style="margin-left:1rem;" href="#" id="signup-button">
-    <button class="join-button">Sign Up</button>
+<a style="margin-left:1rem;" href="#" id="signup-button">
+  <button class="join-button" @click="scrollToAdminDashboard">Sign Up</button>
 </a>
       </div>
  
@@ -117,7 +117,7 @@ export default {
     };
   },
  
- methods: {
+methods: {
   scrollToAdminDashboard() {
     const element = document.getElementById('admin-dashboard');
     if (element) {

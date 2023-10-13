@@ -88,3 +88,4 @@ export default {
       userRights: [
         'You have the right to access, update, correct, or delete your personal information held by us. If you wish to exercise these rights, please contact us using the information provided in the "Contact Information" section below. We will respond to your request within a reasonable timeframe.',
       ],
+<script>

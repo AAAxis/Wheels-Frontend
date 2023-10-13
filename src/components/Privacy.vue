@@ -10,39 +10,40 @@
         Thank you for visiting Wheels Works. This Privacy Policy outlines how we collect, use, and protect the information you provide to us. By accessing or using our website wheels.works, you agree to the terms of this policy.
       </p>
 
+
       <h2>Types of Information Collected</h2>
       <p>We may collect the following types of personally identifiable information (PII) from our users:</p>
-      <ul>
-        <li>Name</li>
-        <li>Address</li>
-        <li>Email address</li>
-        <li>Phone number</li>
-        <li>Billing information</li>
-        <li>Account preferences</li>
-      </ul>
+      <p>
+        - Name<br>
+        - Address<br>
+        - Email address<br>
+        - Phone number<br>
+        - Billing information<br>
+        - Account preferences
+      </p>
       <p>In addition, we may collect non-personally identifiable information automatically, such as IP address, browser type, operating system, and website usage data through the use of cookies and similar technologies. For more information on our use of cookies, please refer to the "Cookies and Tracking Technologies" section below.</p>
 
       <h2>Collection Methods</h2>
       <p>We collect information through various methods, including:</p>
-      <ul>
-        <li>User registration and account creation forms</li>
-        <li>Contact forms or inquiries</li>
-        <li>Online purchases</li>
-        <li>Surveys or feedback submissions</li>
-        <li>Communication with our customer support</li>
-      </ul>
+      <p>
+        - User registration and account creation forms<br>
+        - Contact forms or inquiries<br>
+        - Online purchases<br>
+        - Surveys or feedback submissions<br>
+        - Communication with our customer support
+      </p>
       <p>We may also utilize third-party services to collect and process data on our behalf. These services have their own privacy policies and terms of use, and we recommend reviewing them for further information.</p>
 
       <h2>Purpose of Collection</h2>
       <p>We collect and use the information we gather for the following purposes:</p>
-      <ul>
-        <li>Providing and personalizing our products and services</li>
-        <li>Processing and fulfilling orders or requests</li>
-        <li>Improving our website, products, and services</li>
-        <li>Sending promotional materials, newsletters, or marketing communications (with your consent)</li>
-        <li>Conducting research and analysis</li>
-        <li>Ensuring the security of our systems and detecting fraudulent activities</li>
-      </ul>
+      <p>
+        - Providing and personalizing our products and services<br>
+        - Processing and fulfilling orders or requests<br>
+        - Improving our website, products, and services<br>
+        - Sending promotional materials, newsletters, or marketing communications (with your consent)<br>
+        - Conducting research and analysis<br>
+        - Ensuring the security of our systems and detecting fraudulent activities
+      </p>
 
       <h2>Use and Sharing of Information</h2>
       <p>We do not sell or rent your personal information to third parties. However, we may share your information in the following circumstances:</p>

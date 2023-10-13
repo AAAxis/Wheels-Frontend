@@ -5,42 +5,22 @@
       <h1 class="page-title">{{ pageTitle }}</h1>
     </header>
     <div class="page-body">
-      <p>{{ pageContent[0] }}</p>
-      <p>{{ pageContent[1] }}</p>
-      <p>{{ pageContent[2] }}</p>
-      <p>{{ pageContent[3] }}</p>
-      <p>{{ pageContent[4] }}</p>
-      <p>{{ pageContent[5] }}</p>
-      <p>{{ pageContent[6] }}</p>
+      <p v-for="(content, index) in pageContent" :key="index">{{ content }}</p>
       <ul>
-        <li v-for="info in personallyIdentifiableInfo">{{ info }}</li>
+        <li v-for="info in personallyIdentifiableInfo" :key="info">{{ info }}</li>
       </ul>
-      <p>{{ pageContent[7] }}</p>
-      <p>{{ pageContent[8] }}</p>
       <ul>
-        <li v-for="method in collectionMethods">{{ method }}</li>
+        <li v-for="method in collectionMethods" :key="method">{{ method }}</li>
       </ul>
-      <p>{{ pageContent[9] }}</p>
-      <p>{{ pageContent[10] }}</p>
       <ul>
-        <li v-for="purpose in collectionPurposes">{{ purpose }}</li>
+        <li v-for="purpose in collectionPurposes" :key="purpose">{{ purpose }}</li>
       </ul>
-      <p>{{ pageContent[11] }}</p>
-      <p>{{ pageContent[12] }}</p>
       <ul>
-        <li v-for="usage in useSharingInfo">{{ usage }}</li>
+        <li v-for="usage in useSharingInfo" :key="usage">{{ usage }}</li>
       </ul>
-      <p>{{ pageContent[13] }}</p>
-      <p>{{ pageContent[14] }}</p>
-      <p>{{ pageContent[15] }}</p>
-      <p>{{ pageContent[16] }}</p>
       <ul>
-        <li v-for="userRight in userRights">{{ userRight }}</li>
+        <li v-for="userRight in userRights" :key="userRight">{{ userRight }}</li>
       </ul>
-      <p>{{ pageContent[17] }}</p>
-      <p>{{ pageContent[18] }}</p>
-      <p>{{ pageContent[19] }}</p>
-      <p>{{ pageContent[20] }}</p>
     </div>
   </div>
 </template>
@@ -49,8 +29,7 @@
 export default {
   data() {
     return {
-      coverImageUrl:
-        'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb',
+      coverImageUrl: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb',
       pageTitle: 'Privacy Policy',
       pageContent: [
         'Privacy Policy',
@@ -88,4 +67,7 @@ export default {
       userRights: [
         'You have the right to access, update, correct, or delete your personal information held by us. If you wish to exercise these rights, please contact us using the information provided in the "Contact Information" section below. We will respond to your request within a reasonable timeframe.',
       ],
+    };
+  },
+};
 </script>

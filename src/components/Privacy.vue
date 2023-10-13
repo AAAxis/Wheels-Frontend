@@ -60,7 +60,7 @@
       <p>We implement reasonable security measures to protect your information from unauthorized access, loss, or disclosure. These measures include encryption, firewalls, access controls, and regular security assessments. However, please note that no data transmission or storage method can guarantee 100% security.</p>
 
       <h2>Data Retention</h2>
-      <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy unless a longer retention period is required or permitted by law.</p>
+      <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
 
       <h2>Cookies and Tracking Technologies</h2>
       <p>We use cookies and similar technologies to enhance your browsing experience and analyze website traffic. You may choose to disable or manage cookies through your browser settings. However, please note that certain features of our website may not function properly without cookies.</p>
@@ -109,11 +109,17 @@ h1 {
 h2 {
   font-size: 24px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 p {
   font-size: 16px;
   line-height: 1.5;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
 address {

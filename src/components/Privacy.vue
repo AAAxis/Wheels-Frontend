@@ -1,26 +1,41 @@
 <template>
-  <div>
+  <div class="notion-page">
     <header>
-      <img class="page-cover-image" :src="coverImageUrl" :style="{ objectPosition: 'center 50%' }" />
-      <h1 class="page-title">{{ pageTitle }}</h1>
+      <img class="notion-cover-image" :src="coverImageUrl" />
+      <h1 class="notion-title">{{ pageTitle }}</h1>
     </header>
-    <div class="page-body">
-      <p v-for="(content, index) in pageContent" :key="index">{{ content }}</p>
-      <ul>
-        <li v-for="info in personallyIdentifiableInfo" :key="info">{{ info }}</li>
-      </ul>
-      <ul>
-        <li v-for="method in collectionMethods" :key="method">{{ method }}</li>
-      </ul>
-      <ul>
-        <li v-for="purpose in collectionPurposes" :key="purpose">{{ purpose }}</li>
-      </ul>
-      <ul>
-        <li v-for="usage in useSharingInfo" :key="usage">{{ usage }}</li>
-      </ul>
-      <ul>
-        <li v-for="userRight in userRights" :key="userRight">{{ userRight }}</li>
-      </ul>
+    <div class="notion-content">
+      <section class="notion-section" v-for="(content, index) in pageContent" :key="index">
+        <p>{{ content }}</p>
+      </section>
+      <section class="notion-section">
+        <h2>Personally Identifiable Information</h2>
+        <ul>
+          <li v-for="info in personallyIdentifiableInfo" :key="info">{{ info }}</li>
+        </ul>
+      </section>
+      <section class="notion-section">
+        <h2>Collection Methods</h2>
+        <ul>
+          <li v-for="method in collectionMethods" :key="method">{{ method }}</li>
+        </ul>
+      </section>
+      <section class="notion-section">
+        <h2>Collection Purposes</h2>
+        <ul>
+          <li v-for="purpose in collectionPurposes" :key="purpose">{{ purpose }}</li>
+        </ul>
+      </section>
+      <section class="notion-section">
+        <h2>Use and Sharing of Information</h2>
+        <ul>
+          <li v-for="usage in useSharingInfo" :key="usage">{{ usage }}</li>
+        </ul>
+      </section>
+      <section class="notion-section">
+        <h2>User Rights</h2>
+        <p>{{ userRights[0] }}</p>
+      </section>
     </div>
   </div>
 </template>
@@ -71,3 +86,38 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.notion-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.notion-cover-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.notion-title {
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.notion-section {
+  margin-top: 20px;
+}
+
+.notion-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.notion-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+</style>

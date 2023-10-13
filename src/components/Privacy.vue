@@ -89,7 +89,6 @@ export default {
   name: 'PrivacyPolicy',
 };
 </script>
-
 <style scoped>
 .privacy-policy {
   font-family: Arial, sans-serif;
@@ -120,6 +119,10 @@ p {
 ul {
   list-style-type: disc;
   margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px; /* Add space between list items */
 }
 
 address {

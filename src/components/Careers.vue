@@ -99,28 +99,29 @@ export default {
   mounted() {
     this.fetchJobs();
   },
-  computed: {
-    filteredJobs() {
-      // Filter the jobs based on searchKeywords
-      if (this.searchKeywords) {
-        return this.jobs.filter((job) =>
-          job.title.toLowerCase().includes(this.searchKeywords.toLowerCase())
-        );
-      } else {
-        return this.jobs;
-      }
-    },
+ computed: {
+  filteredJobs() {
+    if (this.searchKeywords) {
+      return this.jobs.filter((job) =>
+        job.title.toLowerCase().includes(this.searchKeywords.toLowerCase())
+      );
+    } else {
+      return this.jobs;
+    }
   },
+},
   methods: {
     fetchJobs() {
-      axios
-        .get('https://polskoydm.pythonanywhere.com/jobs') // Replace '/api/jobs' with your Flask API endpoint
-        .then((response) => {
-          this.jobs = response.data;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+     
+
+        axios
+  .get('https://polskoydm.pythonanywhere.com/jobs')  // Use the correct endpoint matching your Flask route
+  .then((response) => {
+    this.jobs = response.data.jobs; // Update the jobs data
+  })
+  .catch((error) => {
+    console.error(error);
+  });
     },
     searchJobs() {
       // Method to trigger the search based on searchKeywords

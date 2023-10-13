@@ -47,11 +47,11 @@
 
       <h2>Use and Sharing of Information</h2>
       <p>We do not sell or rent your personal information to third parties. However, we may share your information in the following circumstances:</p>
-      <ul>
-        <li>With trusted service providers who assist us in delivering our products and services</li>
-        <li>When required by law or to protect our rights, safety, or property</li>
-        <li>In the event of a corporate merger, acquisition, or sale of assets</li>
-      </ul>
+    <p>
+        - With trusted service providers who assist us in delivering our products and services<br>
+        - When required by law or to protect our rights, safety, or property<br>
+        - In the event of a corporate merger, acquisition, or sale of assets<br>
+    </p>
       <p>We may also share aggregated or anonymized data that does not personally identify you for analytical or marketing purposes.</p>
 
       <h2>User Rights</h2>

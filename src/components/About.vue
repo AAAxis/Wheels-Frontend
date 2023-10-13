@@ -42,13 +42,13 @@ How Can Technology Improve Employee Satisfaction at your Bussines?</p>
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot1.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
         <h2 class="fw-normal">Roman Potchman</h2>
         <p>Operation Manager</p>
-        <p><a class="btn btn-secondary" href="https://www.facebook.com/romchik2802">Contact &raquo;</a></p>  
+        <p><a class="btn btn-secondary" href="https://www.linkedin.com/in/romanpochtman/">Contact &raquo;</a></p>  
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://polskoydm.pythonanywhere.com/static/images/screenshot2.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
         <h2 class="fw-normal">Dmitry Polskoy</h2>
         <p>Solution Architect</p>
-        <p><a class="btn btn-secondary" href="https://aaaxis.github.io/di-bootcamp/Portfolio/Index.html">Contact &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="https://www.linkedin.com/in/dmitry-polskoy-a46103177/">Contact &raquo;</a></p>
   
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">

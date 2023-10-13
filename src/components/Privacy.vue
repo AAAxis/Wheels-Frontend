@@ -6,35 +6,35 @@
     </header>
     <div class="notion-content">
       <section class="notion-section" v-for="(content, index) in pageContent" :key="index">
-        <p>{{ content }}</p>
+        <p class="notion-paragraph">{{ content }}</p>
       </section>
       <section class="notion-section">
-        <h2>Personally Identifiable Information</h2>
-        <ul>
+        <h2 class="notion-heading">Personally Identifiable Information</h2>
+        <ul class="notion-list">
           <li v-for="info in personallyIdentifiableInfo" :key="info">{{ info }}</li>
         </ul>
       </section>
       <section class="notion-section">
-        <h2>Collection Methods</h2>
-        <ul>
+        <h2 class="notion-heading">Collection Methods</h2>
+        <ul class="notion-list">
           <li v-for="method in collectionMethods" :key="method">{{ method }}</li>
         </ul>
       </section>
       <section class="notion-section">
-        <h2>Collection Purposes</h2>
-        <ul>
+        <h2 class="notion-heading">Collection Purposes</h2>
+        <ul class="notion-list">
           <li v-for="purpose in collectionPurposes" :key="purpose">{{ purpose }}</li>
         </ul>
       </section>
       <section class="notion-section">
-        <h2>Use and Sharing of Information</h2>
-        <ul>
+        <h2 class="notion-heading">Use and Sharing of Information</h2>
+        <ul class="notion-list">
           <li v-for="usage in useSharingInfo" :key="usage">{{ usage }}</li>
         </ul>
       </section>
       <section class="notion-section">
-        <h2>User Rights</h2>
-        <p>{{ userRights[0] }}</p>
+        <h2 class="notion-heading">User Rights</h2>
+        <p class="notion-paragraph">{{ userRights[0] }}</p>
       </section>
     </div>
   </div>
@@ -92,7 +92,9 @@ export default {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .notion-cover-image {
@@ -109,15 +111,26 @@ export default {
 
 .notion-section {
   margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.notion-section h2 {
+.notion-heading {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #333;
 }
 
-.notion-content ul {
+.notion-list {
   list-style: disc;
   padding-left: 20px;
+}
+
+.notion-paragraph {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
 }
 </style>

@@ -1,137 +1,122 @@
 <template>
-  <div class="notion-page">
-    <header>
-      <img class="notion-cover-image" :src="coverImageUrl" />
-      <h1 class="notion-title">{{ pageTitle }}</h1>
-    </header>
-    <div class="notion-content">
-      <section class="notion-section" v-for="(content, index) in pageContent" :key="index">
-        <p class="notion-paragraph">{{ content }}</p>
-      </section>
-      <section class="notion-section">
-        <h2 class="notion-heading">Personally Identifiable Information</h2>
-        <ul class="notion-list">
-          <li v-for="info in personallyIdentifiableInfo" :key="info">{{ info }}</li>
-        </ul>
-      </section>
-      <section class="notion-section">
-        <h2 class="notion-heading">Collection Methods</h2>
-        <ul class="notion-list">
-          <li v-for="method in collectionMethods" :key="method">{{ method }}</li>
-        </ul>
-      </section>
-      <section class="notion-section">
-        <h2 class="notion-heading">Collection Purposes</h2>
-        <ul class="notion-list">
-          <li v-for="purpose in collectionPurposes" :key="purpose">{{ purpose }}</li>
-        </ul>
-      </section>
-      <section class="notion-section">
-        <h2 class="notion-heading">Use and Sharing of Information</h2>
-        <ul class="notion-list">
-          <li v-for="usage in useSharingInfo" :key="usage">{{ usage }}</li>
-        </ul>
-      </section>
-      <section class="notion-section">
-        <h2 class="notion-heading">User Rights</h2>
-        <p class="notion-paragraph">{{ userRights[0] }}</p>
-      </section>
+  <div class="privacy-policy">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+
+      <p><strong>Effective Date:</strong> 2023-05-23</p>
+
+      <h2>Introduction</h2>
+      <p>
+        Thank you for visiting Wheels Works. This Privacy Policy outlines how we collect, use, and protect the information you provide to us. By accessing or using our website wheels.works, you agree to the terms of this policy.
+      </p>
+
+      <h2>Types of Information Collected</h2>
+      <p>We may collect the following types of personally identifiable information (PII) from our users:</p>
+      <ul>
+        <li>Name</li>
+        <li>Address</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Billing information</li>
+        <li>Account preferences</li>
+      </ul>
+      <p>In addition, we may collect non-personally identifiable information automatically, such as IP address, browser type, operating system, and website usage data through the use of cookies and similar technologies. For more information on our use of cookies, please refer to the "Cookies and Tracking Technologies" section below.</p>
+
+      <h2>Collection Methods</h2>
+      <p>We collect information through various methods, including:</p>
+      <ul>
+        <li>User registration and account creation forms</li>
+        <li>Contact forms or inquiries</li>
+        <li>Online purchases</li>
+        <li>Surveys or feedback submissions</li>
+        <li>Communication with our customer support</li>
+      </ul>
+      <p>We may also utilize third-party services to collect and process data on our behalf. These services have their own privacy policies and terms of use, and we recommend reviewing them for further information.</p>
+
+      <h2>Purpose of Collection</h2>
+      <p>We collect and use the information we gather for the following purposes:</p>
+      <ul>
+        <li>Providing and personalizing our products and services</li>
+        <li>Processing and fulfilling orders or requests</li>
+        <li>Improving our website, products, and services</li>
+        <li>Sending promotional materials, newsletters, or marketing communications (with your consent)</li>
+        <li>Conducting research and analysis</li>
+        <li>Ensuring the security of our systems and detecting fraudulent activities</li>
+      </ul>
+
+      <h2>Use and Sharing of Information</h2>
+      <p>We do not sell or rent your personal information to third parties. However, we may share your information in the following circumstances:</p>
+      <ul>
+        <li>With trusted service providers who assist us in delivering our products and services</li>
+        <li>When required by law or to protect our rights, safety, or property</li>
+        <li>In the event of a corporate merger, acquisition, or sale of assets</li>
+      </ul>
+      <p>We may also share aggregated or anonymized data that does not personally identify you for analytical or marketing purposes.</p>
+
+      <h2>User Rights</h2>
+      <p>You have the right to access, update, correct, or delete your personal information held by us. If you wish to exercise these rights, please contact us using the information provided in the "Contact Information" section below. We will respond to your request within a reasonable timeframe.</p>
+
+      <h2>Data Security</h2>
+      <p>We implement reasonable security measures to protect your information from unauthorized access, loss, or disclosure. These measures include encryption, firewalls, access controls, and regular security assessments. However, please note that no data transmission or storage method can guarantee 100% security.</p>
+
+      <h2>Data Retention</h2>
+      <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy unless a longer retention period is required or permitted by law.</p>
+
+      <h2>Cookies and Tracking Technologies</h2>
+      <p>We use cookies and similar technologies to enhance your browsing experience and analyze website traffic. You may choose to disable or manage cookies through your browser settings. However, please note that certain features of our website may not function properly without cookies.</p>
+
+      <h2>Third-Party Links</h2>
+      <p>Our website may contain links to third-party websites or services. This Privacy Policy does not apply to those external sites. We recommend reviewing the privacy policies of those websites before providing any personal information.</p>
+
+      <h2>Updates to the Privacy Policy</h2>
+      <p>We reserve the right to update this Privacy Policy periodically. Any changes will be effective immediately upon posting the revised version on our website. We encourage you to review this Privacy Policy regularly for any updates.</p>
+
+      <h2>Contact Information</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+      <address>
+        Wheels Works<br>
+        123 Main Street<br>
+        City, State, ZIP<br>
+        Email: privacy@wheels.works<br>
+        Phone: (123) 456-7890
+      </address>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      coverImageUrl: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb',
-      pageTitle: 'Privacy Policy',
-      pageContent: [
-        'Privacy Policy',
-        'Effective Date: 2023-05-23',
-        'Introduction',
-        'Thank you for visiting Wheels Works. This Privacy Policy outlines how we collect, use, and protect the information you provide to us. By accessing or using our website wheels.works, you agree to the terms of this policy.',
-        'Types of Information Collected',
-        'We may collect the following types of personally identifiable information (PII) from our users:',
-        'In addition, we may collect non-personally identifiable information automatically, such as IP address, browser type, operating system, and website usage data through the use of cookies and similar technologies. For more information on our use of cookies, please refer to the "Cookies and Tracking Technologies" section below.',
-      ],
-      personallyIdentifiableInfo: ['Name', 'Address', 'Email address', 'Phone number', 'Billing information', 'Account preferences'],
-      collectionMethods: [
-        'We collect information through various methods, including:',
-        'User registration and account creation forms',
-        'Contact forms or inquiries',
-        'Online purchases',
-        'Surveys or feedback submissions',
-        'Communication with our customer support',
-      ],
-      collectionPurposes: [
-        'We collect and use the information we gather for the following purposes:',
-        'Providing and personalizing our products and services',
-        'Processing and fulfilling orders or requests',
-        'Improving our website, products, and services',
-        'Sending promotional materials, newsletters, or marketing communications (with your consent)',
-        'Conducting research and analysis',
-        'Ensuring the security of our systems and detecting fraudulent activities',
-      ],
-      useSharingInfo: [
-        'We do not sell or rent your personal information to third parties. However, we may share your information in the following circumstances:',
-        'With trusted service providers who assist us in delivering our products and services',
-        'When required by law or to protect our rights, safety, or property',
-        'In the event of a corporate merger, acquisition, or sale of assets',
-      ],
-      userRights: [
-        'You have the right to access, update, correct, or delete your personal information held by us. If you wish to exercise these rights, please contact us using the information provided in the "Contact Information" section below. We will respond to your request within a reasonable timeframe.',
-      ],
-    };
-  },
+  name: 'PrivacyPolicy',
 };
 </script>
 
 <style scoped>
-.notion-page {
+.privacy-policy {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.notion-cover-image {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-}
-
-.notion-title {
-  font-size: 32px;
-  margin-top: 20px;
+h1 {
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
-.notion-section {
-  margin-top: 20px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.notion-heading {
+h2 {
   font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
+  margin-top: 20px;
 }
 
-.notion-list {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.notion-paragraph {
+p {
   font-size: 16px;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+address {
+  font-style: normal;
 }
 </style>

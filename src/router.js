@@ -7,7 +7,7 @@ import News from './components/News.vue';
 import Apply from './components/Apply.vue';
 import Payment from './components/Payment.vue';
 import Features from './components/Features.vue';
-import Features from './components/Privacy.vue';
+import Privacy from './components/Privacy.vue';
 
 
 const routes = [

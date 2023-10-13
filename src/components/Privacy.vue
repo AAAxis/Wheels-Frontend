@@ -117,8 +117,9 @@ p {
 }
 
 ul {
-  list-style-type: disc;
+  list-style: disc; /* Display dots for list items */
   margin-left: 20px;
+  padding-left: 20px; /* Add padding to align with the dots */
 }
 
 ul li {

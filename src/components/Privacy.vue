@@ -75,11 +75,11 @@
       <h2>Contact Information</h2>
       <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
       <address>
-        Wheels Works<br>
-        123 Main Street<br>
-        City, State, ZIP<br>
-        Email: privacy@wheels.works<br>
-        Phone: (123) 456-7890
+        The Holy Labs<br>
+        3022 16th AVE E<br>
+        Vancouver, BC, V5M 2M5<br>
+        Email: support@theholylabs.com<br>
+        Phone: (647) 472-4580
       </address>
     </div>
   </div>

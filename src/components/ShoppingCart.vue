@@ -1,6 +1,5 @@
 <template>
    <div>
-      <Navbar />
       <router-view />
     </div>
 <div class="product-grid">
@@ -76,12 +75,8 @@
   <script>
   import axios from 'axios';
 
-  import Navbar from './Navbar.vue'
-
-
 export default {
-  components: {
-    Navbar, },
+ 
  
   data() {
     

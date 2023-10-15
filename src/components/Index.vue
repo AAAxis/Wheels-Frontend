@@ -4,22 +4,20 @@
     <router-view />
   </div>
 
-<div class="hero-image">
 
+
+  <div class="hero-image">
     <div class="image-container">
-    
-
       <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
-      <div class="centered"><h1>Wheels Delivery</h1></div>
-        <div class="top-right">
-          
+  
+        <h1 class="top-right-text">Wheels Delivery</h1>
 
-  <button class="join-button" @click="scrollToBottom">Sign Up</button>
-
+      <div class="top-right">
+        <button class="join-button" @click="scrollToBottom">Sign Up</button>
       </div>
- 
     </div>
   </div>
+
 <div style="padding: 1rem;" class="container">
     <!-- START THE FEATURETTES -->
 <br>
@@ -221,5 +219,11 @@ h1 {
   margin-right: 0.5rem;
 }
 
-
+.top-right-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 3rem;
+}
 </style>

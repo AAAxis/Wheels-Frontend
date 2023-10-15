@@ -10,7 +10,7 @@
     <div class="image-container">
       <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
   
-        <h1 class="top-right-text">Wheels Delivery</h1>
+        <h1 style="color:black" class="top-right-text">Billa Deli</h1>
 
       <div class="top-right">
         <button class="join-button" @click="scrollToBottom">Sign Up</button>

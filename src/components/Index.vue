@@ -50,8 +50,8 @@
 <br>
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Ordering Application on Android & IOS  <span class="text-muted">Another day another meal.</span></h2>
-        <p class="lead">Have a great evening at your homes and order some food.</p>
+        <h2 class="featurette-heading fw-normal lh-1">GROCERIES DELIVERED IN 20 MINUTES<span class="text-muted"> cheeses, fruit, vegetables, snacks, nuts, and other products</span></h2>
+        <p class="lead">Quick supermarket</p>
       </div>
       <div class="col-md-5">
          <img style="height:25rem;   object-position: center;  object-fit: none;
@@ -64,8 +64,8 @@
 <br>
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Driver Application <span class="text-muted">The interactive map view</span></h2>
-        <p class="lead"> makes it easy for driver manage all the ongoing deliveries</p>
+        <h2 class="featurette-heading fw-normal lh-1">Billa makes it incredibly easy for you to discover   <span class="text-muted">and get what you want.</span></h2>
+        <p class="lead">Delivered to you – quickly, reliably and affordably.</p>
       </div>
       <div class="col-md-5 order-md-1">
           <img style="height:25rem;   object-position: center;  object-fit: none;
@@ -79,8 +79,8 @@
 
     <div class="row featurette">
        <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Admin Dashboard <span class="text-muted">Monitor and manage your transaction operations</span></h2>
-        <p class="lead">that helps create excellent experiences with E-Commerce</p>
+        <h2 class="featurette-heading fw-normal lh-1">Getting home-delivered sushi is more than your life made easy. </span></h2>
+        <p class="lead">When you order with Billa<span class="text-muted">you help thousands of hard-working restaurant and store owners and couriers make a living.</p>
       </div>
        <div class="col-md-5">
               <img style="height:25rem;   object-position: center;  object-fit: none;

@@ -79,7 +79,7 @@
 
     <div class="row featurette">
        <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Getting home-delivered sushi is more than your life made easy.  <span class="text-muted"></span>When you order with Billa</span></h2>
+        <h2 class="featurette-heading fw-normal lh-1">Getting home-delivered sushi is more than your life made easy.  <span class="text-muted">When you order with Billa</span></h2>
        <p class="text-muted">You help thousands of hard-working restaurant and store owners and couriers make a living.</p>
       </div>
        <div class="col-md-5">

@@ -50,8 +50,8 @@
 <br>
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">GROCERIES DELIVERED IN 20 MINUTES<span class="text-muted"> cheeses, fruit, vegetables, snacks, nuts, and other products</span></h2>
-        <p class="lead">Quick supermarket</p>
+        <h2 class="featurette-heading fw-normal lh-1">QUICK SUPERMARKET<span class="text-muted">Groceries delivered in 20 minutes </span></h2>
+        <p class="lead">cheeses, fruit, vegetables, snacks, nuts, and other products</p>
       </div>
       <div class="col-md-5">
          <img style="height:25rem;   object-position: center;  object-fit: none;
@@ -79,8 +79,8 @@
 
     <div class="row featurette">
        <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Getting home-delivered sushi is more than your life made easy.  <span class="lead">When you order with Billa</span></h2>
-       <p class="text-muted">you help thousands of hard-working restaurant and store owners and couriers make a living.</p>
+        <h2 class="featurette-heading fw-normal lh-1">Getting home-delivered sushi is more than your life made easy.  <span class="text-muted"></span>When you order with Billa</span></h2>
+       <p class="text-muted">You help thousands of hard-working restaurant and store owners and couriers make a living.</p>
       </div>
        <div class="col-md-5">
               <img style="height:25rem;   object-position: center;  object-fit: none;

@@ -50,7 +50,7 @@
 <br>
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">QUICK SUPERMARKET<span class="text-muted"> Groceries delivered in 20 minutes </span></h2>
+        <h2 class="featurette-heading fw-normal lh-1">QUICK ONLINE SUPERMARKET<span class="text-muted"> Groceries delivered in 20 minutes </span></h2>
         <p class="lead">cheeses, fruit, vegetables, snacks, nuts, and other products</p>
       </div>
       <div class="col-md-5">
@@ -79,7 +79,7 @@
 
     <div class="row featurette">
        <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">When you order with Billa<span class="text-muted"></span>You help thousands of hard-working restaurant and store owners and couriers make a living.</h2>
+        <h2 class="featurette-heading fw-normal lh-1">When you order with Billa<span class="text-muted">You help thousands of hard-working restaurant and store owners</span></h2>
        <p class="text-muted">Getting home-delivered goods is more than your life made easy.  </p>
       </div>
        <div class="col-md-5">

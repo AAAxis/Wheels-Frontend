@@ -8,7 +8,7 @@
 
   <div class="hero-image">
     <div class="image-container">
-      <img src="https://img.delicious.com.au/Lyhkcg4N/del/2022/10/p70-classic-angus-beef-burger-with-pickle-burger-sauce-176387-1.png" alt="Hero Image">
+      <img src="https://www.pythonanywhere.com/user/Polskoydm/files/home/Polskoydm/mysite/static/images/designer.png" alt="Hero Image">
   
         <h1 class="top-right-text">Billa Deli</h1>
 
@@ -79,7 +79,7 @@
 
     <div class="row featurette">
        <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">When you order with Billa<span class="text-muted"> You help thousands of hard-working restaurant and store owners</span></h2>
+        <h2 class="featurette-heading fw-normal lh-1">When you order with Billa<span class="text-muted"> you help thousands of hard-working restaurant and store owners</span></h2>
        <p class="text-muted">Getting home-delivered goods is more than your life made easy.  </p>
       </div>
        <div class="col-md-5">

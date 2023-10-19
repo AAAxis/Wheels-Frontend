@@ -79,7 +79,7 @@
 
     <div class="row featurette">
        <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">When you order with Billa<span class="text-muted">You help thousands of hard-working restaurant and store owners</span></h2>
+        <h2 class="featurette-heading fw-normal lh-1">When you order with Billa<span class="text-muted"> You help thousands of hard-working restaurant and store owners</span></h2>
        <p class="text-muted">Getting home-delivered goods is more than your life made easy.  </p>
       </div>
        <div class="col-md-5">

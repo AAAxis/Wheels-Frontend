@@ -10,7 +10,7 @@
     <div class="image-container">
       <img src="https://www.pythonanywhere.com/user/Polskoydm/files/home/Polskoydm/mysite/static/images/designer.png" alt="Hero Image">
   
-        <h1 style="color:black" class="top-right-text">Billa Deli</h1>
+        <h1 style="color:white" class="top-right-text">Billa Food</h1>
 
       <div class="top-right">
         <button class="join-button" @click="scrollToBottom">Sign Up</button>

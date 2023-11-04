@@ -8,7 +8,7 @@
 
   <div class="hero-image">
     <div class="image-container">
-      <img src="https://www.pythonanywhere.com/user/Polskoydm/files/home/Polskoydm/mysite/static/images/designer.png" alt="Hero Image">
+      <img src="https://www.pythonanywhere.com/static/images/designer.png" alt="Hero Image">
   
         <h1 style="color:white" class="top-right-text">Billa Deli</h1>
 

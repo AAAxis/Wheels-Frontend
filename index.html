@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="./public/icon.png" />
     <script src="https://js.stripe.com/v3/"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <script src="https://kit.fontawesome.com/003aac0f2b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
@@ -61,27 +61,7 @@
       </div>
 
 
- 
-      <form method="POST" action="https://polskoydm.pythonanywhere.com/captha" id="subscribeForm">
-        <h5>Subscribe</h5>
-        <p>Monthly digest from us.</p>
-        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-          <input style="margin:2px;" name="email" id="newsletter1" type="text" class="form-control" placeholder="Email Address..." required>
-      
-          <div class="g-recaptcha" data-sitekey="6LfRhm0pAAAAAN5Zua_Gis541c_8lJritJy1j1cZ"></div>
-          <button>Submit</button>
-        </div>
-      </form>
-      
-      <script type="text/javascript">
-        var onloadCallback = function() {
-          alert("grecaptcha is ready!");
-        };
-      </script>
 
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-    async defer>
-    </script>
 
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
       <p>© 2022 <a style="color:black" href="https://theholylabs.com">The Holylabs</a>. All rights reserved.</p>

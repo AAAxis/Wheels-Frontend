@@ -99,13 +99,11 @@
 </template>
 
 <script>
-import LiveChat from "./LiveChat.vue";
+
 import axios from 'axios';
 
 export default {
-  components: {
-    LiveChat
-  },
+
   data() {
     return {
       branches: [],

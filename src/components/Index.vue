@@ -98,43 +98,40 @@
 </template>
 
 <script>
-mounted() {
-  // Initialize Firebase
-  const firebaseConfig = {
-       apiKey: "AIzaSyASwq11lvLT6YfaGwp7W_dCBICDzVsBbSM",
-  authDomain: "bankapp-9798a.firebaseapp.com",
-  projectId: "bankapp-9798a",
-  storageBucket: "bankapp-9798a.appspot.com",
-  messagingSenderId: "868698601721",
-  appId: "1:868698601721:web:e061dcefcb437f53854a28",
-  measurementId: "G-WY7R44DDM4"
-  };
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
-  firebase.initializeApp(firebaseConfig);
+export default {
+  data() {
+    return {
+      branches: [] // Initialize an empty array to hold the branches data
+    };
+  },
+  mounted() {
+    // Initialize Firebase
+    const firebaseConfig = {
+      // Your Firebase config here
+    };
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
 
-  // Get a reference to the Firestore database service
-  const db = firebase.firestore();
+    // Access the Firestore database
+    const db = firebase.firestore();
 
-  // Fetch data from Firestore collection
-  db.collection("merchants").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      this.branches.push(doc.data());
+    // Fetch branches collection
+    db.collection('branches').get().then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        // Push each branch document into the branches array
+        this.branches.push(doc.data());
+      });
+    }).catch(error => {
+      console.error('Error fetching branches: ', error);
     });
-  }).catch((error) => {
-    console.error("Error fetching documents: ", error);
-  });
-}
-
-
-
-
-
-
-
-
-
-
+  }
+};
 </script>
+
 
 
 <style>

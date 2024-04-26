@@ -12,7 +12,7 @@
   
    
       <div class="top-right">
-
+        <button class="join-button" @click="scrollToBottom">Sign Up</button>
       </div>
     </div>
   </div>
@@ -33,10 +33,10 @@
     <div class="row">
       <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="(branch, index) in branches" :key="branch.id">
         <div class="card">
-          <a :href="`/${branch.id}/shop`"><img :src="branch.link" :alt="branch.title" class="card-img-top"></a>
+     <a v-if="branch.id" :href="`/${branch.id}/shop`"><img :src="branch.link" :alt="branch.title" class="card-img-top"></a>
+
           <div class="card-body">
             <h5 class="card-title">{{ branch.name }}</h5>
-             <button @click="goToDocument(branch.id)">Go to Document</button>
             <p>20 min - $0 Delivery</p>
           </div>
         </div>
@@ -99,19 +99,11 @@
 </template>
 
 <script>
-
 // Import the necessary Firebase modules
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 
-
 export default {
-   methods: {
-    goToDocument(documentId) {
-      // Redirect to the document page using the document number
-      window.location.href = `/${documentId}/shop`;
-    }
-  }
   data() {
     return {
       branches: [] // Initialize an empty array to hold the branches data

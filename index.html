@@ -21,33 +21,7 @@
     <script type="module" src="/src/main.js"></script>
   </body>
 
-  <script>
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-
-export default {
-  created() {
-    // Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyASwq11lvLT6YfaGwp7W_dCBICDzVsBbSM",
-  authDomain: "bankapp-9798a.firebaseapp.com",
-  projectId: "bankapp-9798a",
-  storageBucket: "bankapp-9798a.appspot.com",
-  messagingSenderId: "868698601721",
-  appId: "1:868698601721:web:e061dcefcb437f53854a28",
-  measurementId: "G-WY7R44DDM4"
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    // Optionally, you can access Firestore directly here
-    const db = firebase.firestore();
-    // Now you can use Firestore throughout your Vue.js application
-  }
-}
-</script>
-
+ 
 
   <div class="container">
   <footer class="py-5">

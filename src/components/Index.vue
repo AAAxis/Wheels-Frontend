@@ -33,7 +33,7 @@
     <div class="row">
       <div class="col-md-2 col-sm-4 col-xs-6 mb-4" v-for="(branch, index) in branches" :key="branch.id">
         <div class="card">
-          <a :href="`/${branch.token}/shop`"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.file" :alt="branch.title" class="card-img-top"></a>
+          <a :href="`/${branch.id}/shop`"><img :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + branch.link" :alt="branch.title" class="card-img-top"></a>
           <div class="card-body">
             <h5 class="card-title">{{ branch.name }}</h5>
             <p>20 min - $0 Delivery</p>

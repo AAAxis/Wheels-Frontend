@@ -141,7 +141,7 @@ db.collection('merchants').get().then(querySnapshot => {
 }).catch(error => {
   console.error('Error fetching branches: ', error);
 });
-  }
+  
 };
 
 </script>

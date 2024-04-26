@@ -129,15 +129,18 @@ export default {
     // Access the Firestore database
     const db = firebase.firestore();
 
-    // Fetch branches collection
-    db.collection('merchants').get().then(querySnapshot => {
-      querySnapshot.forEach(doc => {
-        // Push each branch document into the branches array
-        this.branches.push(doc.data());
-      });
-    }).catch(error => {
-      console.error('Error fetching branches: ', error);
-    });
+   // Fetch branches collection
+db.collection('merchants').get().then(querySnapshot => {
+  querySnapshot.forEach(doc => {
+    const branchData = doc.data();
+    // Assign the document ID to the branch data
+    branchData.id = doc.id;
+    // Push each branch document into the branches array
+    this.branches.push(branchData);
+  });
+}).catch(error => {
+  console.error('Error fetching branches: ', error);
+});
   }
 };
 

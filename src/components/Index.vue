@@ -98,8 +98,9 @@
 </template>
 
 <script>
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+// Import the necessary Firebase modules
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 export default {
   data() {
@@ -108,10 +109,18 @@ export default {
     };
   },
   mounted() {
-    // Initialize Firebase
+    // Initialize Firebase with your Firebase config
     const firebaseConfig = {
-      // Your Firebase config here
+         apiKey: "AIzaSyASwq11lvLT6YfaGwp7W_dCBICDzVsBbSM",
+  authDomain: "bankapp-9798a.firebaseapp.com",
+  projectId: "bankapp-9798a",
+  storageBucket: "bankapp-9798a.appspot.com",
+  messagingSenderId: "868698601721",
+  appId: "1:868698601721:web:e061dcefcb437f53854a28",
+  measurementId: "G-WY7R44DDM4"
     };
+
+    // Check if Firebase is already initialized to avoid reinitialization
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
     }
@@ -120,7 +129,7 @@ export default {
     const db = firebase.firestore();
 
     // Fetch branches collection
-    db.collection('branches').get().then(querySnapshot => {
+    db.collection('merchants').get().then(querySnapshot => {
       querySnapshot.forEach(doc => {
         // Push each branch document into the branches array
         this.branches.push(doc.data());
@@ -130,6 +139,7 @@ export default {
     });
   }
 };
+
 </script>
 
 

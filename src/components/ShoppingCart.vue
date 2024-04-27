@@ -1,75 +1,18 @@
 <template>
-   <div>
-      <router-view />
-    </div>
-<div class="product-grid">
-
-  <div style="padding: 2rem;" class="container">
-  <h2>Products</h2>
-  <br>
-  <div class="product-grid__cards">
-    <div v-for="product in products" :key="product.id" class="product-grid__card" @click="addToCart(product)">
-      <div class="product-grid__info">
-        <h4 class="product-grid__name">{{product.name}}</h4>
-    
-      </div>
-      <div class="product-grid__image-wrapper">
-        <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
-        <div class="product-grid__add-to-cart">
-        <button class="btn btn-success">Add ${{product.price}}.0</button> 
-        </div>
-      </div>
-    
-    </div>
-  </div>
-
-</div>
-
-
-
-<link href="https://polskoydm.pythonanywhere.com/static/styles/checkout.css" rel="stylesheet">
-<div class="container mt-5 p-3 rounded cart">
-  <div class="row no-gutters">
-    <div class="col-md-8">
-      <div class="product-details mr-2">
-        <div class="d-flex flex-row align-items-center"><i style="margin-right: 1rem;" class="fa fa-shopping-cart"></i><span class="ml-2"> Shopping Cart</span></div>
-        <hr>
-      
-        <div class="d-flex justify-content-between">
-          <div class="d-flex flex-row align-items-center"><span class="text-black-50">Total: </span>
-            <div class="price ml-2"><span class="mr-1"> ${{cartTotal}}</span></div>
-          </div>
-        </div>
-
-        <div class="cart-items mt-3">
-          <div v-for="(item, index) in cartItems" :key="index" class="item d-flex justify-content-between align-items-center p-2 rounded">
-            <div class="d-flex flex-row">
-              <img class="rounded" :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + item.product.image" width="40">
-              <div class="ml-2">
-                <span class="font-weight-bold d-block">{{ item.product.name }}</span>
-                <span class="spec">{{ item.quantity }}x</span>
-              </div>
-            </div>
-            <div class="d-flex flex-row align-items-center">
-              <span class="d-block ml-3 font-weight-bold">${{ item.product.price }}.0</span>
-              <button class="btn btn-danger ml-3" style="margin-left: 2rem;" @click="removeFromCart(index)">
-  <i class="fa fa-trash-o text-white"></i>
-</button>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
+<div>
+  <h1>{{ storeName }}</h1>
+  <div v-if="products.length === 0">No products available</div>
+  <div v-else>
+    <div v-for="(product, index) in products" :key="index">
+      <h2>{{ product.name }}</h2>
+      <p>Price: {{ product.price }}</p>
+      <p>Description: {{ product.description }}</p>
+      <!-- Add any other product details you want to display -->
+      <button @click="addToCart(product)">Add to Cart</button>
     </div>
   </div>
 </div>
 
-           
-     
-      <br>
-      <button style="margin: 1rem;" class="btn btn-primary" @click="checkout">Checkout</button>
-    </div>
   </template>
   
   <script>

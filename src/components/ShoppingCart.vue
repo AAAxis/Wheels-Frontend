@@ -44,7 +44,7 @@
         <div class="cart-items mt-3">
           <div v-for="(item, index) in cartItems" :key="index" class="item d-flex justify-content-between align-items-center p-2 rounded">
             <div class="d-flex flex-row">
-              <img class="rounded" :src="'https://polskoydm.pythonanywhere.com/static/uploads/' + item.product.image" width="40">
+              <img class="rounded" :src="item.product.image" width="40">
               <div class="ml-2">
                 <span class="font-weight-bold d-block">{{ item.product.name }}</span>
                 <span class="spec">{{ item.quantity }}x</span>

@@ -71,35 +71,43 @@
       <button style="margin: 1rem;" class="btn btn-primary" @click="checkout">Checkout</button>
     </div>
   </template>
-  import { db } from '@/firebase'; // Import Firebase configuration
+  
+  <script>
+import firebase from 'firebase/app';
+import 'firebase/firestore'; // Import Firestore if you're using Firestore
 
 export default {
   data() {
     return {
       storeName: '',
       products: [],
-      baseUrl: 'https://polskoydm.pythonanywhere.com/static/uploads',
       cartItems: [],
     }
   },
 
   created() {
-    const storeId = window.location.href.split('/')[3];
-    
-    // Fetch data from Firebase Firestore
-    db.collection(storeId).get()
-      .then(querySnapshot => {
-        const data = [];
-        querySnapshot.forEach(doc => {
-          data.push({ id: doc.id, ...doc.data() });
-        });
-        this.storeName = data[0].store;
-        this.products = data;
-      })
-      .catch(error => {
-        console.log(error);
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Fetch data from Firestore
+    const db = firebase.firestore();
+    db.collection("products").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        this.products.push(doc.data());
       });
+    }).catch((error) => {
+      console.error("Error fetching products: ", error);
+    });
   },
+
   computed: {
     cartTotal() {
       return this.cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
@@ -135,25 +143,23 @@ export default {
         total: this.cartTotal,
       };
   
-      // Perform checkout with Firebase
-      // You need to implement this logic based on your Firebase setup
-      // For example, you may store orders in a separate collection
-      // and update the cartItems array accordingly
-      
-      // Example:
-      // db.collection('orders').add(data)
-      //   .then(docRef => {
-      //     const orderID = docRef.id;
-      //     this.cartItems = [];
-      //     this.$router.push({ name: 'Payment', params: { orderID } });
-      //   })
-      //   .catch(error => {
-      //     console.log(error);
-      //   });
+      axios.post('https://polskoydm.pythonanywhere.com/checkout', data)
+        .then(response => {
+          const orderID = response.data.order_id;
+          this.cartItems = [];
+  
+          // Redirect to the payment page with the order ID
+          this.$router.push({ name: 'Payment', params: { orderID } });
+        })
+        .catch(error => {
+          console.log(error);
+        });
     },
   },
 };
 
+
+  </script>
 
 
 <style>

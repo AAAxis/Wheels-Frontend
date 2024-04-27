@@ -30,6 +30,9 @@ export default {
   },
 
   created() {
+
+        const token = window.location.href.split('/')[3]; // Extract token from URL
+
     // Initialize Firebase
     const firebaseConfig = {
         apiKey: "AIzaSyASwq11lvLT6YfaGwp7W_dCBICDzVsBbSM",

@@ -5,8 +5,8 @@
     <table class="cart-table">
       <tfoot>
         <tr>
-          <td colspan="2" class="total-label">Total:</td>
-          <td class="total-price">${{ cartTotal }}</td>
+         <td class="total-price">${{ orderID }}</td>
+          <td class="total-price">${{ total }}</td>
         </tr>
       </tfoot>
     </table>
@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       orderID: null,
-      cartTotal: 0,
+      total: 0,
       email: '',
       name: '',
       address: '',
@@ -82,9 +82,7 @@ export default {
         .then(doc => {
           if (doc.exists) {
             const orderData = doc.data();
-            this.email = orderData.email;
-            this.name = orderData.name;
-            this.address = orderData.address;
+    
             this.total = orderData.total;
           } else {
             console.log('No such order!');

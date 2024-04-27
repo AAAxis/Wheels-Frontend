@@ -5,7 +5,7 @@
     <table class="cart-table">
       <tfoot>
         <tr>
-         <td class="total-price">${{ orderID }}</td>
+         <td class="total-price">{{ orderID }}</td>
           <td class="total-price">${{ total }}</td>
         </tr>
       </tfoot>

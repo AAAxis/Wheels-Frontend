@@ -14,7 +14,8 @@
     
       </div>
       <div class="product-grid__image-wrapper">
-        <img :src="`${baseUrl}/${product.image}`" alt="product image" class="product-grid__image">
+          <img class="product-grid__image" :src="item.product.image_url" width="40">
+     
         <div class="product-grid__add-to-cart">
         <button class="btn btn-success">Add ${{product.price}}.0</button> 
         </div>
@@ -44,7 +45,7 @@
         <div class="cart-items mt-3">
           <div v-for="(item, index) in cartItems" :key="index" class="item d-flex justify-content-between align-items-center p-2 rounded">
             <div class="d-flex flex-row">
-              <img class="rounded" :src="item.product.image" width="40">
+              <img class="rounded" :src="item.product.image_url" width="40">
               <div class="ml-2">
                 <span class="font-weight-bold d-block">{{ item.product.name }}</span>
                 <span class="spec">{{ item.quantity }}x</span>
@@ -87,7 +88,8 @@ export default {
   },
 
   created() {
-           const token = window.location.href.split('/')[3]; // Extract token from URL
+
+        const token = window.location.href.split('/')[3]; // Extract token from URL
 
     // Initialize Firebase
     const firebaseConfig = {

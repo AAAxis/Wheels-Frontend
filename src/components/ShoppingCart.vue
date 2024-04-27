@@ -162,25 +162,40 @@ checkout() {
 
   const db = firebase.firestore();
 
-  // Create a new document in the orders collection
-  db.collection('orders').add({
-    items: this.cartItems.map(item => ({
+ // Create a new document in the orders collection
+db.collection('orders').add({
+  total: this.cartTotal,
+  timestamp: firebase.firestore.FieldValue.serverTimestamp() // Add timestamp
+})
+.then(docRef => {
+  const orderID = docRef.id;
+  
+  // Create a subcollection named "cart" within the order document
+  const cartRef = db.collection('orders').doc(orderID).collection('cart');
+
+  // Store rows inside the cart subcollection
+  this.cartItems.forEach((item, index) => {
+    cartRef.add({
       product_id: item.product.id,
       quantity: item.quantity,
-    })),
-    total: this.cartTotal,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp() // Add timestamp
-  })
-  .then(docRef => {
-    const orderID = docRef.id;
-
-    // Redirect to the payment page with the order ID
-    this.$router.push({ name: 'Payment', params: { orderID } });
-  })
-  .catch(error => {
-    console.log('Error adding order:', error);
+      // You can add additional fields here if needed
+    })
+    .then(() => {
+      console.log('Item added to cart successfully');
+      // You may perform any additional actions here if needed
+    })
+    .catch(error => {
+      console.error('Error adding item to cart:', error);
+    });
   });
-}
+
+  // Redirect to the payment page with the order ID
+  this.$router.push({ name: 'Payment', params: { orderID } });
+})
+.catch(error => {
+  console.log('Error adding order:', error);
+});
+
   }
 };
 

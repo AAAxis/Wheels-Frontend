@@ -99,15 +99,18 @@ export default {
     };
     firebase.initializeApp(firebaseConfig);
 
-    // Fetch data from Firestore
-    const db = firebase.firestore();
-    db.collection("products").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        this.products.push(doc.data());
-      });
-    }).catch((error) => {
-      console.error("Error fetching products: ", error);
+  // Fetch data from Firestore
+  const db = firebase.firestore();
+  db.collection("products").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      const productData = doc.data();
+      // Log received product data
+      console.log('Received product:', productData);
+      this.products.push(productData);
     });
+  }).catch((error) => {
+    console.error("Error fetching products: ", error);
+  });
   },
 
   computed: {

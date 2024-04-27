@@ -140,28 +140,7 @@ db.collection("merchants").doc(token).collection("products").get()
     },
   },
   methods: {
-    addToCart(product) {
-      const cartItem = this.cartItems.find(item => item.product.id === product.id);
-      if (cartItem) {
-        cartItem.quantity++;
-      } else {
-        this.cartItems.push({
-          product,
-          quantity: 1,
-        });
-      }
-    },
-    removeFromCart(index) {
-      this.cartItems.splice(index, 1);
-    },
-checkout() {
-  if (this.cartItems.length === 0) {
-    alert('Your cart is empty!');
-    return;
-  }
-
-  const db = firebase.firestore();
-addToCart(product) {
+   addToCart(product) {
   console.log("Adding product to cart:", product);
   const cartItem = this.cartItems.find(item => item.product.id === product.id);
   if (cartItem) {
@@ -190,6 +169,50 @@ cartItems.forEach((item, index) => {
   });
 });
 
+    removeFromCart(index) {
+      this.cartItems.splice(index, 1);
+    },
+checkout() {
+  if (this.cartItems.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
+
+  const db = firebase.firestore();
+
+ // Create a new document in the orders collection
+db.collection('orders').add({
+  total: this.cartTotal,
+  timestamp: firebase.firestore.FieldValue.serverTimestamp() // Add timestamp
+})
+.then(docRef => {
+  const orderID = docRef.id;
+  
+  // Create a subcollection named "cart" within the order document
+  const cartRef = db.collection('orders').doc(orderID).collection('cart');
+
+  // Store rows inside the cart subcollection
+  this.cartItems.forEach((item, index) => {
+    cartRef.add({
+      product_id: item.product.id,
+      quantity: item.quantity,
+      // You can add additional fields here if needed
+    })
+    .then(() => {
+      console.log('Item added to cart successfully');
+      // You may perform any additional actions here if needed
+    })
+    .catch(error => {
+      console.error('Error adding item to cart:', error);
+    });
+  });
+
+  // Redirect to the payment page with the order ID
+  this.$router.push({ name: 'Payment', params: { orderID } });
+})
+.catch(error => {
+  console.log('Error adding order:', error);
+});
 
   }
 };

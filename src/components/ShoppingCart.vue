@@ -161,40 +161,35 @@ checkout() {
   }
 
   const db = firebase.firestore();
-
- // Create a new document in the orders collection
-db.collection('orders').add({
-  total: this.cartTotal,
-  timestamp: firebase.firestore.FieldValue.serverTimestamp() // Add timestamp
-})
-.then(docRef => {
-  const orderID = docRef.id;
-  
-  // Create a subcollection named "cart" within the order document
-  const cartRef = db.collection('orders').doc(orderID).collection('cart');
-
-  // Store rows inside the cart subcollection
-  this.cartItems.forEach((item, index) => {
-    cartRef.add({
-      product_id: item.product.id,
-      quantity: item.quantity,
-      // You can add additional fields here if needed
-    })
-    .then(() => {
-      console.log('Item added to cart successfully');
-      // You may perform any additional actions here if needed
-    })
-    .catch(error => {
-      console.error('Error adding item to cart:', error);
+addToCart(product) {
+  console.log("Adding product to cart:", product);
+  const cartItem = this.cartItems.find(item => item.product.id === product.id);
+  if (cartItem) {
+    cartItem.quantity++;
+  } else {
+    console.log("Adding new item to cart.");
+    this.cartItems.push({
+      product,
+      quantity: 1,
     });
+  }
+},
+cartItems.forEach((item, index) => {
+  console.log("Adding item to cart:", item);
+  cartRef.add({
+    product_id: item.product.id,
+    quantity: item.quantity,
+    // You can add additional fields here if needed
+  })
+  .then(() => {
+    console.log('Item added to cart successfully');
+    // You may perform any additional actions here if needed
+  })
+  .catch(error => {
+    console.error('Error adding item to cart:', error);
   });
-
-  // Redirect to the payment page with the order ID
-  this.$router.push({ name: 'Payment', params: { orderID } });
-})
-.catch(error => {
-  console.log('Error adding order:', error);
 });
+
 
   }
 };

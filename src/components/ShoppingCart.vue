@@ -14,8 +14,8 @@
     
       </div>
       <div class="product-grid__image-wrapper">
-          <img class="product-grid__image" :src="item.product.image_url" width="40">
-     
+        <img class="product-grid__image" :src="item.product.image_url" width="40">
+ 
         <div class="product-grid__add-to-cart">
         <button class="btn btn-success">Add ${{product.price}}.0</button> 
         </div>
@@ -88,8 +88,7 @@ export default {
   },
 
   created() {
-
-        const token = window.location.href.split('/')[3]; // Extract token from URL
+           const token = window.location.href.split('/')[3]; // Extract token from URL
 
     // Initialize Firebase
     const firebaseConfig = {
@@ -185,6 +184,7 @@ db.collection("merchants").doc(token).collection("products").get()
 
 
   </script>
+
 
 
 <style>

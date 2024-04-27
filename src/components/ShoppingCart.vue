@@ -14,7 +14,8 @@
     
       </div>
       <div class="product-grid__image-wrapper">
-        <img :src="item.product.image_url" alt="product image" class="product-grid__image">
+              <img class="rounded" :src="item.product.image_url" class="product-grid__image" width="40">
+
         <div class="product-grid__add-to-cart">
         <button class="btn btn-success">Add ${{product.price}}.0</button> 
         </div>

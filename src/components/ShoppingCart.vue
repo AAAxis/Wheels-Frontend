@@ -77,7 +77,7 @@
 // Import the necessary Firebase modules
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-import axios from 'axios';
+
 
 
 export default {
@@ -154,34 +154,35 @@ db.collection("merchants").doc(token).collection("products").get()
     removeFromCart(index) {
       this.cartItems.splice(index, 1);
     },
+checkout() {
+  if (this.cartItems.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
 
-    checkout() {
-      if (this.cartItems.length === 0) {
-        alert('Your cart is empty!');
-        return;
-      }
-  
-      const data = {
-        items: this.cartItems.map(item => ({
-          product_id: item.product.id,
-          quantity: item.quantity,
-        })),
-        total: this.cartTotal,
-      };
-  
-      axios.post('https://polskoydm.pythonanywhere.com/checkout', data)
-        .then(response => {
-          const orderID = response.data.order_id;
-          this.cartItems = [];
-  
-          // Redirect to the payment page with the order ID
-          this.$router.push({ name: 'Payment', params: { orderID } });
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    },
-  },
+  const db = firebase.firestore();
+
+  // Create a new document in the orders collection
+  db.collection('orders').add({
+    items: this.cartItems.map(item => ({
+      product_id: item.product.id,
+      quantity: item.quantity,
+    })),
+    total: this.cartTotal,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp() // Add timestamp
+  })
+  .then(docRef => {
+    const orderID = docRef.id;
+    this.cartItems = [];
+
+    // Redirect to the payment page with the order ID
+    this.$router.push({ name: 'Payment', params: { orderID } });
+  })
+  .catch(error => {
+    console.log('Error adding order:', error);
+  });
+}
+  }
 };
 
 

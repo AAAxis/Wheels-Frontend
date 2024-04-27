@@ -61,8 +61,6 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
   data() {
     return {
@@ -76,34 +74,66 @@ export default {
     };
   },
   methods: {
-    fetchCartItems(orderID) {
-      axios.get(`https://polskoydm.pythonanywhere.com/payment/${orderID}`)
-        .then(response => {
-          this.cartItems = response.data.cart_items;
-          this.cartTotal = response.data.total;
+    fetchOrder(orderID) {
+      // Fetch the order from Firestore
+      db.collection('orders').doc(orderID).get()
+        .then(doc => {
+          if (doc.exists) {
+            const orderData = doc.data();
+
+            // Update component data with order details
+            this.email = orderData.email;
+            this.name = orderData.name;
+            this.address = orderData.address;
+            this.cartItems = orderData.cartItems;
+            this.cartTotal = orderData.cartTotal;
+            this.paymentReceived = orderData.paymentReceived;
+          } else {
+            console.log('No such order!');
+          }
         })
         .catch(error => {
-          console.log(error);
+          console.log('Error getting order:', error);
+        });
+    },
+    updateOrder() {
+      const orderRef = db.collection('orders').doc(this.orderID);
+
+      // Prepare data to be updated in the order document
+      const updatedOrderData = {
+        email: this.email,
+        name: this.name,
+        address: this.address,
+        // Include other fields as necessary
+      };
+
+      // Update the order document in Firestore
+      orderRef.update(updatedOrderData)
+        .then(() => {
+          console.log('Order updated successfully');
+          // Optionally, you can do something after the order is updated
+        })
+        .catch(error => {
+          console.error('Error updating order:', error);
         });
     },
     checkout() {
+      // Validate data before proceeding
       if (this.cartItems.length === 0) {
         alert('Your cart is empty!');
         return;
       }
 
-      // Check if email, name, and address are provided
       if (!this.email || !this.name || !this.address) {
         alert('Please provide your email, name, and address.');
         return;
       }
 
-      const data = {
-        email: this.email,
-        name: this.name,
-        address: this.address,
-      };
-
+      // If data is valid, update the order
+      this.updateOrder();
+    }
+  }
+};
       // Call the server to create a new payment intent
       axios.post(`https://polskoydm.pythonanywhere.com/payment/${this.orderID}`, {
         email: this.email,

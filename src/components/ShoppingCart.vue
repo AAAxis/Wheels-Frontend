@@ -73,8 +73,9 @@
   </template>
   
   <script>
-import firebase from 'firebase/app';
-import 'firebase/firestore'; // Import Firestore if you're using Firestore
+// Import the necessary Firebase modules
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 export default {
   data() {

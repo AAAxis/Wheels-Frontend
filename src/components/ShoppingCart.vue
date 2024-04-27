@@ -164,16 +164,12 @@ checkout() {
 
   // Create a new document in the orders collection
   db.collection('orders').add({
-    items: this.cartItems.map(item => ({
-      product_id: item.product.id,
-      quantity: item.quantity,
-    })),
+
     total: this.cartTotal,
     timestamp: firebase.firestore.FieldValue.serverTimestamp() // Add timestamp
   })
   .then(docRef => {
     const orderID = docRef.id;
-    this.cartItems = [];
 
     // Redirect to the payment page with the order ID
     this.$router.push({ name: 'Payment', params: { orderID } });

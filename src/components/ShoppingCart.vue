@@ -77,6 +77,8 @@
 // Import the necessary Firebase modules
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
+import axios from 'axios';
+
 
 export default {
   data() {

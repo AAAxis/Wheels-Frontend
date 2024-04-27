@@ -71,15 +71,10 @@
       <button style="margin: 1rem;" class="btn btn-primary" @click="checkout">Checkout</button>
     </div>
   </template>
-  
-  <script>
-  import axios from 'axios';
+  import { db } from '@/firebase'; // Import Firebase configuration
 
 export default {
- 
- 
   data() {
-    
     return {
       storeName: '',
       products: [],
@@ -90,14 +85,20 @@ export default {
 
   created() {
     const storeId = window.location.href.split('/')[3];
-    axios.get(`https://polskoydm.pythonanywhere.com/${storeId}/shop`)
-      .then(response => {
-        this.storeName = response.data[0].store
-        this.products = response.data
+    
+    // Fetch data from Firebase Firestore
+    db.collection(storeId).get()
+      .then(querySnapshot => {
+        const data = [];
+        querySnapshot.forEach(doc => {
+          data.push({ id: doc.id, ...doc.data() });
+        });
+        this.storeName = data[0].store;
+        this.products = data;
       })
       .catch(error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   },
   computed: {
     cartTotal() {
@@ -134,23 +135,25 @@ export default {
         total: this.cartTotal,
       };
   
-      axios.post('https://polskoydm.pythonanywhere.com/checkout', data)
-        .then(response => {
-          const orderID = response.data.order_id;
-          this.cartItems = [];
-  
-          // Redirect to the payment page with the order ID
-          this.$router.push({ name: 'Payment', params: { orderID } });
-        })
-        .catch(error => {
-          console.log(error);
-        });
+      // Perform checkout with Firebase
+      // You need to implement this logic based on your Firebase setup
+      // For example, you may store orders in a separate collection
+      // and update the cartItems array accordingly
+      
+      // Example:
+      // db.collection('orders').add(data)
+      //   .then(docRef => {
+      //     const orderID = docRef.id;
+      //     this.cartItems = [];
+      //     this.$router.push({ name: 'Payment', params: { orderID } });
+      //   })
+      //   .catch(error => {
+      //     console.log(error);
+      //   });
     },
   },
 };
 
-
-  </script>
 
 
 <style>

@@ -3,27 +3,6 @@
     <h2>Payment</h2>
 
     <table class="cart-table">
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in cartItems" :key="item.id">
-          <td>
-            <div class="item-info">
-              <img class="rounded" :src="`https://polskoydm.pythonanywhere.com/static/uploads/${item.image}`" width="40">
-              <div class="item-details">
-                <h4 class="item-name">{{ item.name }}</h4>
-              </div>
-            </div>
-          </td>
-          <td>{{ item.quantity }}</td>
-          <td>${{ item.price }}</td>
-        </tr>
-      </tbody>
       <tfoot>
         <tr>
           <td colspan="2" class="total-label">Total:</td>
@@ -85,7 +64,6 @@ export default {
   data() {
     return {
       orderID: null,
-      cartItems: [],
       cartTotal: 0,
       email: '',
       name: '',
@@ -107,9 +85,7 @@ export default {
             this.email = orderData.email;
             this.name = orderData.name;
             this.address = orderData.address;
-            this.cartItems = orderData.cartItems;
-            this.cartTotal = orderData.cartTotal;
-            this.paymentReceived = orderData.paymentReceived;
+            this.total = orderData.total;
           } else {
             console.log('No such order!');
           }

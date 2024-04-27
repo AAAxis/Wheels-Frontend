@@ -99,18 +99,34 @@ export default {
     };
     firebase.initializeApp(firebaseConfig);
 
-  // Fetch data from Firestore
-  const db = firebase.firestore();
-  db.collection("products").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      const productData = doc.data();
-      // Log received product data
-      console.log('Received product:', productData);
-      this.products.push(productData);
-    });
-  }).catch((error) => {
+// Fetch data from Firestore based on token
+const db = firebase.firestore();
+db.collection("merchants").doc(token).collection("products").get()
+  .then(querySnapshot => {
+    if (!querySnapshot.empty) {
+      querySnapshot.forEach(doc => {
+        this.products.push(doc.data());
+      });
+      // Assuming you want to set storeName based on the merchant document
+      db.collection("merchants").doc(token).get()
+        .then(merchantDoc => {
+          if (merchantDoc.exists) {
+            this.storeName = merchantDoc.data().store;
+          } else {
+            console.log("No such merchant document found!");
+          }
+        })
+        .catch(error => {
+          console.error("Error fetching merchant document: ", error);
+        });
+    } else {
+      console.log("No products found for this merchant.");
+    }
+  })
+  .catch(error => {
     console.error("Error fetching products: ", error);
   });
+
   },
 
   computed: {

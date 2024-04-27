@@ -61,6 +61,10 @@
 </template>
 
 <script>
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -73,9 +77,26 @@ export default {
       paymentReceived: false,
     };
   },
+  created() {
+    this.orderID = this.$route.params.orderID;
+    this.fetchOrder(this.orderID);
+  },
   methods: {
     fetchOrder(orderID) {
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID"
+      };
+      firebase.initializeApp(firebaseConfig);
+
       // Fetch the order from Firestore
+      const db = firebase.firestore();
       db.collection('orders').doc(orderID).get()
         .then(doc => {
           if (doc.exists) {
@@ -97,6 +118,19 @@ export default {
         });
     },
     updateOrder() {
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID"
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      const db = firebase.firestore();
       const orderRef = db.collection('orders').doc(this.orderID);
 
       // Prepare data to be updated in the order document
@@ -131,9 +165,7 @@ export default {
 
       // If data is valid, update the order
       this.updateOrder();
-    }
-  }
-};
+
       // Call the server to create a new payment intent
       axios.post(`https://polskoydm.pythonanywhere.com/payment/${this.orderID}`, {
         email: this.email,
@@ -148,12 +180,9 @@ export default {
         });
     },
   },
-  created() {
-    this.orderID = this.$route.params.orderID;
-    this.fetchCartItems(this.orderID);
-  },
 };
 </script>
+
 
 
 

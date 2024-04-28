@@ -68,7 +68,7 @@ export default {
       email: '',
       name: '',
       address: '',
-      paymentReceived: false,
+  
     };
   },
   created() {
@@ -83,6 +83,7 @@ export default {
           if (doc.exists) {
             const orderData = doc.data();
     
+            this.store = orderData.store;
             this.total = orderData.total;
           } else {
             console.log('No such order!');

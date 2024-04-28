@@ -120,9 +120,21 @@ export default {
         return;
       }
       this.updateOrder();
-
-      window.location.href = `https://polskoydm.pythonanywhere.com/create-checkout-session/${this.orderID}/${this.email}/${this.total}/${this.store}`;
-    },
+      // Send data via POST request
+      axios.post('https://polskoydm.pythonanywhere.com/create-checkout-session', {
+        orderID: this.orderID,
+        storeID: this.store,
+        email: this.email,
+        total: this.total
+      })
+      .then(response => {
+        // Redirect to the checkout session URL
+        window.location.href = response.data.sessionUrl;
+      })
+      .catch(error => {
+        console.error('Error creating checkout session:', error);
+      });
+  },
   },
 };
 </script>

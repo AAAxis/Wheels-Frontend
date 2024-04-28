@@ -87,7 +87,7 @@ export default {
     }
   },
   created() {
-    token = window.location.href.split('/')[3]; // Assign token value
+    const token = window.location.href.split('/')[3]; // Assign token value
     const firebaseConfig = { 
     
         apiKey: "AIzaSyASwq11lvLT6YfaGwp7W_dCBICDzVsBbSM",

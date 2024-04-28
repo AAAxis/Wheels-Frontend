@@ -1,41 +1,31 @@
 <template>
-  <div>
-    <h2>Payment</h2>
+<div style="padding: 20px;">
 
-    <table class="cart-table">
-      <tfoot>
-        <tr>
-         <td class="total-price">{{ orderID }}</td>
-          <td class="total-price">${{ total }}</td>
-        </tr>
-      </tfoot>
-    </table>
+  <h2 style="margin-bottom: 20px;">Checkout</h2>
 
-   
-    <!-- Email Input -->
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" v-model="email" required>
-    </div>
-
-    <!-- Name Input -->
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" v-model="name" required>
-    </div>
-
-    <!-- Address Input -->
-    <div class="form-group">
-      <label for="address">Address:</label>
-      <input type="text" id="address" v-model="address" required>
-    </div>
-
-    <div>
-      <button @click="checkout">Proceed to Payment</button>
-    </div>
-  
-   
+  <!-- Email Input -->
+  <div class="form-group" style="margin-bottom: 20px;">
+    <label for="email">Email:</label>
+    <input type="email" id="email" v-model="email" required style="padding: 5px; width: 100%;">
   </div>
+
+  <!-- Name Input -->
+  <div class="form-group" style="margin-bottom: 20px;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" v-model="name" required style="padding: 5px; width: 100%;">
+  </div>
+
+  <!-- Address Input -->
+  <div class="form-group" style="margin-bottom: 20px;">
+    <label for="address">Address:</label>
+    <input type="text" id="address" v-model="address" required style="padding: 5px; width: 100%;">
+  </div>
+
+  <div>
+    <button @click="checkout" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Proceed to Payment</button>
+  </div>
+
+</div>
 
 </template>
 <script>

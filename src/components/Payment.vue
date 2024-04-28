@@ -121,7 +121,6 @@ export default {
       axios.post('https://polskoydm.pythonanywhere.com/create-checkout-session', {
         orderID: this.orderID,
         storeID: this.store,
-        name: this.name,
         email: this.email,
         total: this.total
       })

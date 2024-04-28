@@ -121,7 +121,7 @@ export default {
       }
       this.updateOrder();
 
-      window.location.href = `https://polskoydm.pythonanywhere.com/create-checkout-session/${this.orderID}/${this.email}/${this.total}`;
+      window.location.href = `https://polskoydm.pythonanywhere.com/create-checkout-session/${this.orderID}/${this.email}/${this.total}/${this.store}`;
     },
   },
 };

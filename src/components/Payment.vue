@@ -111,10 +111,7 @@ export default {
         });
     },
     checkout() {
-      if (this.cartItems.length === 0) {
-        alert('Your cart is empty!');
-        return;
-      }
+
       if (!this.email || !this.name || !this.address) {
         alert('Please provide your email, name, and address.');
         return;

@@ -119,17 +119,8 @@ export default {
         return;
       }
       this.updateOrder();
-      axios.post(`https://polskoydm.pythonanywhere.com/payment/${this.orderID}`, {
-        email: this.email,
-        name: this.name,
-        address: this.address,
-      })
-        .then(response => {
-          window.location.href = `https://polskoydm.pythonanywhere.com/create-checkout-session/${this.orderID}`;
-        })
-        .catch(error => {
-          // Handle the error
-        });
+
+      window.location.href = `https://polskoydm.pythonanywhere.com/create-checkout-session/${this.orderID}/${this.email}/${this.total}`;
     },
   },
 };

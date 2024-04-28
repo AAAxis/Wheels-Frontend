@@ -83,10 +83,11 @@ export default {
       storeName: '',
       products: [],
       cartItems: [],
+      token: '' // Define token in data
     }
   },
   created() {
-    const token = window.location.href.split('/')[3];
+    this.token = window.location.href.split('/')[3]; // Assign token value
     const firebaseConfig = { 
     
         apiKey: "AIzaSyASwq11lvLT6YfaGwp7W_dCBICDzVsBbSM",

@@ -155,7 +155,7 @@ export default {
         alert('Your cart is empty!');
         return;
       }
-
+      const token = window.location.href.split('/')[3]; // Assign token value
       const db = firebase.firestore();
       db.collection('orders').add({
         store: token,

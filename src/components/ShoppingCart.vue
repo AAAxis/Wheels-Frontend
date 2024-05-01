@@ -159,6 +159,7 @@ export default {
       const db = firebase.firestore();
       db.collection('orders').add({
         store: token,
+        status: 'ordering',
         total: this.cartTotal,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       })

@@ -169,11 +169,12 @@ export default {
 
         this.cartItems.forEach(item => {
           cartRef.add({
-            product_description: item.product.description,
-            product_category: item.product.category,
+     
+
             product_image_url: item.product.image_url,
             product_name: item.product.name,
-            product_id: item.product.id,
+            
+            price: item.product.price,
             quantity: item.quantity,
           })
           .then(() => {
